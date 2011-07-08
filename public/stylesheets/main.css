@@ -1,0 +1,179 @@
+body {
+	background-color: #996;
+}
+body,td,th {
+	line-height: 14px;
+}
+body p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+
+a:link {
+	text-decoration: none;
+	color: #333;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: #900;
+}
+a:active {
+	text-decoration: none;
+}
+
+
+
+#news-blasts {
+	font: 14px Georgia, serif;
+}
+
+#news-blasts p {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333;
+}
+
+
+	#page-wrap {
+		width: 1000px;
+		margin: 0px auto;
+		background: #996;
+		padding: 20px;
+		position: relative;
+		overflow:hidden;
+	}
+	
+	#title {
+		float:left;
+	}
+	
+	
+	
+	#kara {
+		margin: 0px 0px 0 8px;
+	}
+	
+	#dir {
+		top: 0px;
+		right: 80px;
+		margin: 0px auto;
+		position: absolute;
+	}
+	
+	
+	#navChunk {
+		margin: 10px 0 10px 0;
+		text-align: center;
+		min-width:1000px;
+	}
+	
+	nav {
+		margin: 10px 0 10px 0;
+		text-align: center;
+		min-width:1000px;
+		font-family: Arial,Helvetica,sans-serif;
+	}
+	
+	ul#menu {
+		list-style:none;
+	}
+	ul#menu li {
+		display: inline;
+		color: #000;
+	}
+	ul#menu li a {
+		color: #333333;
+	}
+	ul#menu li.highlighted a {
+		color: #eee;
+	}
+	
+	
+	
+
+	
+
+#partners-wrap { display: block; width: 281px; margin: 0; }  /*height + padding <= 69 to fit 8pics... plus padding */
+
+/* style="position:relative; margin-left:auto; margin-right:auto; left:15px; top:90px;" */
+
+#center-wrap {
+	margin: 0 120px 0 300px;
+}
+
+#flashbox {
+	padding-top: 24px;
+}
+
+#footer-div {
+	text-align: center;
+}
+
+#spacer {
+	width:1000px; clear:both;
+}
+
+#lovely-description {
+	width: 560px;
+	padding-top:10px;
+	padding-left:10px;
+	font: 14px Georgia, serif;
+}
+
+#lovely-description p {
+	font-family: 'sans serif';
+	font-style: bold;
+	font-size: large;
+	color:white;
+}
+
+#right-wrap {
+	float: right;
+	width: 130px;
+}
+
+#banner-bottom {
+	margin:auto;
+	width: 20%;
+}
+
+
+
+
+/*  about us CSS */
+
+#about-div {
+	line-height:20px;
+	font-size: 14px;
+	font-weight:400;
+	font-family:sans-serif;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: 0em;
+	
+}
+
+#about-div p {
+	margin: 1em 0;	
+	font-style: italic;
+}
+
+#about-div h1 {
+	padding-top: 1em;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000;
+	font-style: normal;
+	
+}
+
+ul {
+    padding-left:2em;
+    margin-left:0;
+}

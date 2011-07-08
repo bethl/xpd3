@@ -1,4 +1,28 @@
 Xpd3::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/about"
+
+  get "pages/gallery"
+
+  get "pages/specials"
+
+  get "pages/products"
+
+  get "pages/news"
+
+  get "page/home"
+
+  get "page/about"
+
+  get "page/gallery"
+
+  get "page/specials"
+
+  get "page/products"
+
+  get "page/news"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
