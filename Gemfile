@@ -4,6 +4,9 @@ gem 'rails', '3.0.7'
 
 gem 'mysql2', '0.2.7'
 
+group :development do
+    gem 'rspec-rails', '2.6.1'
+end
 # Use unicorn as the web server
 # gem 'unicorn'
 
