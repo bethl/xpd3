@@ -1,0 +1,16 @@
+<%= form_for @person do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <div class="field">
+    <%= f.text_area :first_name %>
+  </div>
+  <div class="field">
+    <%= f.text_area :last_name %>
+  </div>
+  <div class="field">
+    <%= f.text_area :email %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

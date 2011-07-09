@@ -10,6 +10,53 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110709073036) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "state"
+    t.string   "city"
+    t.string   "zipcode"
+    t.string   "address1"
+    t.string   "address2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "employees", :force => true do |t|
+    t.integer  "employeeid"
+    t.string   "name"
+    t.string   "position_title"
+    t.date     "origin_date"
+    t.date     "dob"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "people", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "encrypted_password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "salt"
+    t.boolean  "admin"
+  end
 
 end

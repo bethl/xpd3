@@ -1,6 +1,19 @@
 Xpd3::Application.routes.draw do
   
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
+  
   root :to => 'pages#home'
+  
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]  #qualifieing it like this means '/sessions/1' doesn't work, neither does '/sessions/1/edit'
+  resources :relationships, :only => [:create, :destroy]
+  resources :people, :only => [:create, :destroy, :index]
+  
+  
   
   get "pages/home"
 
@@ -25,6 +38,14 @@ Xpd3::Application.routes.draw do
   get "page/products"
 
   get "page/news"
+  
+  
+  
+  match '/signup', :to => 'users#new'
+  match '/signin', :to => 'sessions#new'
+  match '/signout', :to => 'sessions#destroy'
+  
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
