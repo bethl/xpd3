@@ -10,7 +10,6 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20110709073036) do
 
   create_table "addresses", :force => true do |t|
@@ -47,37 +46,17 @@ ActiveRecord::Schema.define(:version => 20110709073036) do
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
-=======
-ActiveRecord::Schema.define(:version => 20110630233202) do
-
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
->>>>>>> 5614ea52b4a4f0c007d7041f21b247b8ab8bc358
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
-<<<<<<< HEAD
     t.string   "email"
     t.string   "encrypted_password"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "salt"
-    t.boolean  "admin"
-  end
-=======
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password"
     t.string   "salt"
     t.boolean  "admin",              :default => false
   end
-
-  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
->>>>>>> 5614ea52b4a4f0c007d7041f21b247b8ab8bc358
 
 end
