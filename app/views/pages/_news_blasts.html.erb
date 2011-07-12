@@ -1,11 +1,5 @@
 <div id="news-blast" style="text-align:center; border-width:thin; border-style:solid; ">
 	<div id="nb-title"><p><b>NEWS BLAST</b></p> </div>
 	<div id="nb-date"><p style="display:block; text-align:center; margin:auto;">- July 19 -</p> </div>
-	<p><%=@newsblast.html_safe %></p>
+	<%= render :partial => 'shared/news_blast_item', :collection => @news_blast_items, :spacer_template => 'shared/spacer_part' %>  <%# auto iterates since you specify a collection, and puts in spacer between each element%>
 </div>
-
-<% @nb_items = []%>
-
-    <%= render :partial => 'shared/nb_item', :collection => @feed_items %>  <%# auto iterates since you specify a collection%>
-    
-
