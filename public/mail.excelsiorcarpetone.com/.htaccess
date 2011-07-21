@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^mail.excelsiorcarpetone.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www.mail.excelsiorcarpetone.com$
+RewriteRule ^/?$ "http\:\/\/www\.excelsiorcarpetone\.com\:2095" [R=301,L]
+
