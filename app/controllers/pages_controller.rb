@@ -7,7 +7,6 @@ class PagesController < ApplicationController
     # Date
     # Headline
     # list of facts
-    
   end
 
   def about
@@ -23,6 +22,16 @@ class PagesController < ApplicationController
   end
 
   def news
+  end
+  
+  
+  def manage
+    @nb = NewsBlast.new if NewsBlast.count == 0
+    
+    @nb = NewsBlast.first
+    
+    
+    
   end
   
 end

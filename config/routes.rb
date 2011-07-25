@@ -13,7 +13,9 @@ Xpd3::Application.routes.draw do
   resources :relationships, :only => [:create, :destroy]
   resources :people, :only => [:create, :destroy, :index]
   
+  resources :news_blasts
   
+  get "pages/manage"
   
   get "pages/home"
 

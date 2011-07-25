@@ -1,0 +1,27 @@
+<h1>Listing news_blasts</h1>
+
+<table>
+  <tr>
+    <th>Headline</th>
+    <th>Content</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news_blasts.each do |news_blast| %>
+  <tr>
+    <td><%= news_blast.headline %></td>
+    <td><%= news_blast.content %></td>
+    <td><%= news_blast.date %></td>
+    <td><%= link_to 'Show', news_blast %></td>
+    <td><%= link_to 'Edit', edit_news_blast_path(news_blast) %></td>
+    <td><%= link_to 'Destroy', news_blast, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New News blast', new_news_blast_path %>

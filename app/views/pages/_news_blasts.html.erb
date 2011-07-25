@@ -1,5 +1,6 @@
 <div id="news-blast" style="text-align:center; border-width:thin; border-style:solid; ">
 	<div id="nb-title"><p><b>NEWS BLAST</b></p> </div>
-	<div id="nb-date"><p style="display:block; text-align:center; margin:auto;">- July 19 -</p> </div>
+	<div id="nb-headline">The Sky Is Falling</div>
+	<div id="nb-date"><b>- July 19 -</b> </div>
 	<%= render :partial => 'shared/news_blast_item', :collection => @news_blast_items, :spacer_template => 'shared/spacer_part' %>  <%# auto iterates since you specify a collection, and puts in spacer between each element%>
 </div>

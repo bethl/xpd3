@@ -1,0 +1,2 @@
+module NewsBlastsHelper
+end

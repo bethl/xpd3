@@ -1,5 +1,5 @@
 class NewsBlast < ActiveRecord::Base
-  attr_accessible :date, :headline
+  attr_accessible :date, :headline, :content
   
-  has_many :nb_items
+  serialize :content
 end
