@@ -4,6 +4,7 @@ gem 'rails', '3.0.7'
 gem 'will_paginate', '3.0.pre2'
 gem 'mysql2', '0.2.7'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'thin'
 
 group :development do
     gem 'rspec-rails', '2.5.0'
