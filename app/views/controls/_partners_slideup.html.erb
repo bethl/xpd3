@@ -1,43 +1,63 @@
-			<h2 id="partners-header">Product Suppliers</h2>
-			<section class="slide-up-boxes">
-				
-				<a href="http://www.benjaminmoore.com/en-us/for-your-home/benjamin-moore-us-product-catalog">
-					<div id="top" alt="Benjamin Moore"></div>
-					<div id="bottom" alt="These guys do paint"></div>
-				</a>
-				
-				<a href="http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf">
-					<div id="top" alt="Graham Paint"></div>
-					<div id="bottom" alt="These guys do paint"></div>
-				</a>
-				
-				<a href="#">
-					<div id="top" alt="Fine Paints of Europe"></div>
-					<div id="bottom" alt="These guys do fine paint"></div>	
-				</a>
-				
-				<a href="#http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf">
-					<div id="top" alt="Hunter Douglas"></div>
-					<div id="bottom" alt="Blinds, etc."></div>	
-				</a>
-				
-				<a href="#">
-					<div id="top" alt="Magnus Anderson"></div>
-					<div id="bottom" alt="Wood floors"></div>	
-				</a>
-				
-				<a href="#">
-					<div id="top" alt="Silestone"></div>
-					<div id="bottom" alt="Tile"></div>	
-				</a>
-				
-				<a href="#">
-					<div id="top" alt="DuPont Corian"></div>
-					<div id="bottom" alt="Quartz Tile and Countertop"></div>	
-				</a>
-				
-				<a href="#">
-					<div id="top" alt="Cambria"></div>
-					<div id="bottom" alt="Luxiury counter tops"></div>	
-				</a>
-			</section>
+<% user_agent = client_browser_name %>
+
+<% if user_agent == "ie8" or user_agent == "ie7" %>
+
+	<div id="upgradeBrowser">
+		<h1> Old Browser Detected </h1>
+		<p>This is not an advertisement.  We (xpd) have detected that you are using <%= user_agent %> which does not support all the features that contemporary websites are designed for.  
+		   Have you considered updating your browser?  Below is a list of modern browsers which may enhance your online shopping experience.</p>  
+		<p style="padding-top:5px;"> --IT@excelsiorcarpetone.com</p>
+		<ul>
+			<li><a href="http://www.google.com/chrome/">Chrome</a> - Easiest setup</li>
+			<li><a href="http://www.mozilla.com/en-US/firefox/fx/">Fire Fox</a> - Most extendable</li>
+			<li><a href="http://www.microsoft.com/IE9">IE 9</a> - Most integrated (but more tedious to upgrade to and less feature rich)</li>
+		</ul>
+	</div>
+
+<% else %>
+
+	<h2 id="partners-header">Product Suppliers</h2>
+	<section class="slide-up-boxes">
+		
+		<a href="http://www.benjaminmoore.com/en-us/for-your-home/benjamin-moore-us-product-catalog">
+			<div id="top" alt="Benjamin Moore"></div>
+			<div id="bottom" alt="These guys do paint"></div>
+		</a>
+		
+		<a href="http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf">
+			<div id="top" alt="Graham Paint"></div>
+			<div id="bottom" alt="These guys do paint"></div>
+		</a>
+		
+		<a href="#">
+			<div id="top" alt="Fine Paints of Europe"></div>
+			<div id="bottom" alt="These guys do fine paint"></div>	
+		</a>
+		
+		<a href="#http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf">
+			<div id="top" alt="Hunter Douglas"></div>
+			<div id="bottom" alt="Blinds, etc."></div>	
+		</a>
+		
+		<a href="#">
+			<div id="top" alt="Magnus Anderson"></div>
+			<div id="bottom" alt="Wood floors"></div>	
+		</a>
+		
+		<a href="#">
+			<div id="top" alt="Silestone"></div>
+			<div id="bottom" alt="Tile"></div>	
+		</a>
+		
+		<a href="#">
+			<div id="top" alt="DuPont Corian"></div>
+			<div id="bottom" alt="Quartz Tile and Countertop"></div>	
+		</a>
+		
+		<a href="#">
+			<div id="top" alt="Cambria"></div>
+			<div id="bottom" alt="Luxiury counter tops"></div>	
+		</a>
+	</section>
+	
+<% end %>
