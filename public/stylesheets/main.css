@@ -91,6 +91,7 @@ a:active {
 	}
 	
 	nav {
+		display:block;
 		margin: 0px 0 10px 0;
 		text-align: center;
 		min-width:1000px;

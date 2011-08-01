@@ -1,18 +1,20 @@
 <!-- Navigation ROW -->
 <nav>
-	<hr /> 
-	<ul id="menu" style="padding-top:16px; padding-bottom:16px;">
-		<li class="<%= "highlighted" if params[:action] == "home" %>"> <a href='/pages/home'>HOME </a></li>
-		<li><span class="doubleColon">: :  </span></li>
-		<li class="<%= "highlighted" if params[:action] == "about" %>"><a href="/pages/about">ABOUT US</a></li>
-		<li><span class="doubleColon">: : </span> </li>
-		<li class="<%= "highlighted" if params[:action] == "gallery" %>"><a href="/pages/gallery">GALLERY</a> </li>
-		<li><span class="doubleColon">: : </span></li>
-		<li class="<%= "highlighted" if params[:action] == "specials" %>"><a href="/pages/specials">SPECIALS</a></li>
-		<li><span class="doubleColon"> : : </span></li>
-		<li class="<%= "highlighted" if params[:action] == "products" %>"><a href="/pages/products" title="Products and Services" target="_self">PRODUCTS</a></li>
-		<li><span class="doubleColon"> : : </span></li>
-		<li class="<%= "highlighted" if params[:action] == "news" %>"><a href="/pages/news">NEWS</a></li>
-	</ul>
-	<hr /> 
+	<div id="navChunk">
+		<hr /> 
+		<ul id="menu" style="padding-top:16px; padding-bottom:16px;">
+			<li class="<%= "highlighted" if params[:action] == "home" %>"> <a href='/pages/home'>HOME </a></li>
+			<li><span class="doubleColon">: :  </span></li>
+			<li class="<%= "highlighted" if params[:action] == "about" %>"><a href="/pages/about">ABOUT US</a></li>
+			<li><span class="doubleColon">: : </span> </li>
+			<li class="<%= "highlighted" if params[:action] == "gallery" %>"><a href="/pages/gallery">GALLERY</a> </li>
+			<li><span class="doubleColon">: : </span></li>
+			<li class="<%= "highlighted" if params[:action] == "specials" %>"><a href="/pages/specials">SPECIALS</a></li>
+			<li><span class="doubleColon"> : : </span></li>
+			<li class="<%= "highlighted" if params[:action] == "products" %>"><a href="/pages/products" title="Products and Services" target="_self">PRODUCTS</a></li>
+			<li><span class="doubleColon"> : : </span></li>
+			<li class="<%= "highlighted" if params[:action] == "news" %>"><a href="/pages/news">NEWS</a></li>
+		</ul>
+		<hr /> 
+	</div>
 </nav>
