@@ -119,7 +119,20 @@ a:active {
 	}
 	
 	
-	
+#upgradeBrowser {
+	width:230px;
+}
+
+#upgradeBrowser ul li{
+	padding: 10px;
+}
+
+#upgradeBrowser a {
+	color:blue;
+}
+#upgradeBrowser h1 {
+	font-size:20px;
+}
 
 	
 
