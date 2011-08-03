@@ -29,9 +29,9 @@ class PagesController < ApplicationController
     @nb = NewsBlast.new if NewsBlast.count == 0
     
     @nb = NewsBlast.first
-    
-    
-    
   end
   
+  def template
+    
+  end
 end

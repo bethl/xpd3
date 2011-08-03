@@ -25,12 +25,8 @@
 
 <%= render 'layouts/header' %>
 <%= render 'layouts/navigation' %>
+<%= render 'layouts/flash', :flash => flash %>
 
-<div id="page-wrap">
-<% flash.each do |key, value| %>
-	<div class="flash <%= key %>"><%= value %></div>
-<% end %>
-</div>
 
 <div id="page-wrap">
 	<%= yield %>

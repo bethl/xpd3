@@ -33,6 +33,7 @@ Xpd3::Application.routes.draw do
 
   get "page/about"
 
+
   get "page/gallery"
 
   get "page/specials"
@@ -42,6 +43,7 @@ Xpd3::Application.routes.draw do
   get "page/news"
   
   
+  match '/template', :to => 'pages#template'
   
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
