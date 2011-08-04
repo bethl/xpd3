@@ -140,11 +140,12 @@ a:active {
 	background-color: #00004b;
 	color:white;
 	height: 85px;
-	padding: 8px;
+	padding-left: 8px;
+	padding-top:4px;
 }
 
 .hili {
-	background:red;
+	background:#cf0035;
 	color:#ffdddd;
 	line-height: 30px;
 }
@@ -152,10 +153,10 @@ a:active {
 ul#pFiltersList {
 	list-style:none;
 	-webkit-user-select: none;
-	//-khtml-user-select: none;
+	-khtml-user-select: none;
 	-moz-user-select: none;
-	//-o-user-select: none;
-	//user-select: none;
+	-o-user-select: none;
+	user-select: none;
 	cursor:pointer;
 }
 
@@ -200,14 +201,16 @@ ul#pFiltersList li:hover{
 }
 
 #lovely-description {
+	text-indent:50px;
 	width: 560px;
 	padding-top:10px;
 	padding-left:10px;
-	font: 14px Georgia, serif;
+	font: 14px "Arial Black", sans-serif;
 }
 
 #lovely-description p {
 	font-family: 'sans serif';
+	font-family:"Times New Roman",Times,serif;
 	font-style: bold;
 	font-size: large;
 	color:DarkBlue;

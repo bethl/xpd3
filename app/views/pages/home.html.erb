@@ -8,47 +8,99 @@
 			<%= render 'controls/partners_slideup' %>
 			
 			<div id="partners-filter" >
-				Display Filters:
+				<span id="disphead" style="color:#ffccff;"><b>
+					Display Filters:
+				</b></span>
 				<br>
 				<ul id="pFiltersList">
-					<li class="hili">Paint</li>
-					<li class="hili">Tile</li>  
-					<li class="hili">Window Treatments</li>
-					<li class="hili">Counter Tops</li>
-					<li class="hili">Carpet</li>
-					<li class="hili">Wood Floor</li>
+					<li>Paint</li>
+					<li>Tile</li>  
+					<li>Window Treatments</li>
+					<li>Counter Tops</li>
+					<li>Carpet</li>
+					<li>Wood Floor</li>
 				</ul>
 			</div>
 		</div>
 		
 		
 		<script>
+			var antiFilter = new Array(); // this array keeps track of what tags are currently being filtered
+			
+			function include(arr, obj)
+			{
+				
+				
+				return (indexOfM(arr, obj) != -1);
+			}
+			
+			function indexOfM(arr, str)
+			{
+				for(var i=0; i<arr.length; i++){
+					if(arr[i]==str){
+						return i;
+					}
+				}
+				//alert('ie fails');
+				return -1;
+			}
+			
+			
+			
+			
+			//antiFilter.push("ha");
+			//antiFilter.splice(0,1);
+			//alert(include(antiFilter,"ha"));
+			//alert(antiFilter.indexOf("ha"));
+			//alert(indexOfM(antiFilter, "ha"));
+			//alert(antiFilter.length);
+			
+			
 		    $("#pFiltersList li").click(function () { 
 	    	  var tehTag = $(this).html().toLowerCase();
-		      
-		      if ($(this).hasClass("hili"))
+	    	  
+		      var filterStrA = 'a[tag="'+ tehTag + '"]';                  // for good browsers
+		      var filterStrB = 'div[tag="' + jQuery.trim(tehTag) + '"]';  // for suck browsers
+		      	
+		      if ($(this).hasClass("hili"))         // DISABLE FILTER
 		      {
 		      	$(this).removeClass("hili");
-		      	var filterStr = 'a[tag="'+ tehTag + '"]';
-		      	$(filterStr).hide();
+		      	
+		      	antiFilter.splice(indexOfM(antiFilter, tehTag),1);
+		      	
+		      	$(filterStrA).hide();
+		      	$(filterStrB).hide();
+		      	
+		      	if (antiFilter.length == 0)
+		      	{
+		      		$(".slide-up-boxes a").show();
+		      		$(".pbox").show();
+		      	}
 		      }
-		      else
+		      else                                  // ENABLE FILTER
 		      {
 		      	$(this).addClass("hili");
-		      	var filterStr = 'a[tag="'+ tehTag + '"]';
-		      	$(filterStr).show();
+		      	//var filterStrA = 'a[tag="'+ tehTag + '"]';
+		      	//var filterStrB = 'div[tag="' + jQuery.trim(tehTag) + '"]';
+		      	
+		      	// For the first time, if the antiFilter list is empty, that means we're going to hid every element before showing the one desired...
+		      	if (antiFilter.length == 0)
+		      	{
+		      		//alert('antiFilter[0]');
+		      		$(".slide-up-boxes a").hide();  // et. al.
+		      		$(".pbox").hide();  // ie
+		      	}
+		      	
+		      	if (!include(antiFilter,tehTag))   // if the antiFilter doesn't have the tag, then add it, otherwise, it's weird that it already had the tag... do nothing (prevent duplications...)
+		      	{
+		      		antiFilter.push(tehTag);
+		      	}
+		      	
+		      	
+		      	$(filterStrA).show();
+		      	$(filterStrB).show();
 		      }
-		      //alert($(this).attr("tag"));  // prints out the attribute's value, or undefined
-		      //alert($(this).html().toLowerCase());         // prints out the contents of the elements
-		      
-		      
-		      // Hide all partner boxes who's tag == tehTag
-		      
-		      
-		      
-		      
 		    });
-		    
 		</script>
 
 		
@@ -99,7 +151,7 @@
 				//-->
 			</script> 
 			
-			<div id="lovely-description" style="text-indent:50px;">
+			<div id="lovely-description" class="containter">
 				<p>Excelsior Paint & Design Center, a family company, is the <span id="boldinate">local choice</span> for paint and design solutions.  We make solving your design problems our duty and always earn the satisfaction of our customers.  <span id="boldinate">Stop in today,</span> and speak with one of our many <span id="boldinate">design experts!</span></p>
 			</div>
 		</div>

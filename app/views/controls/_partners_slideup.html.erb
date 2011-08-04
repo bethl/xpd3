@@ -3,53 +3,70 @@
 <% if user_agent == "ie8" or user_agent == "ie7" %>
 	
 		<h2 id="partners-header">Product Suppliers</h2>
-	<section class="slide-up-boxes">
-		<div id="ben" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="paint">
-			<img src="/images/partners-slideup/ben-slideup-mockup.jpg" width="281" height="126" alt="Benjamin Moore"/>
-		</div>
-		
-		<div id="hun" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
-			<img src="/images/partners-slideup/hunt-slideup.jpg" width="281" height="126" alt="Hunter Douglas"/>
-		</div>
-		
-		<div id="cam" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
-			<img src="/images/partners-slideup/partners-cambria.png" width="281" height="126" alt="Benjamin Moore"/>
-		</div>
-		
-		<div id="fin" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
-			<img src="/images/partners-slideup/partners-finepaints.png" width="281" height="126" alt="Benjamin Moore"/>
-		</div>
-		
-		<div id="sil" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
-			<img src="/images/partners-slideup/partners-silestone.png" width="281" height="126" alt="Benjamin Moore"/>
-		</div>
-		
-		
-		<div id="mag" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
-			<img src="/images/partners-slideup/partners-magnus.png" width="281" height="126" alt="Benjamin Moore"/>
-		</div>
+			<div class="slide-up-boxes" style="padding-bottom:9px;width:295px;">
+				<div id="ben" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="paint">
+					<img src="/images/partners-slideup/ben-slideup-mockup.jpg" width="281" height="126" alt="Benjamin Moore"/>
+				</div>
+				
+				<div id="hun" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="window treatments">
+					<img src="/images/partners-slideup/hunt-slideup.jpg" width="281" height="126" alt="Hunter Douglas"/>
+				</div>
+				
+				<div id="cam" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="counter tops">
+					<img src="/images/partners-slideup/partners-cambria.png" width="281" height="126" alt="Benjamin Moore"/>
+				</div>
+				
+				<div id="fin" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="paint">
+					<img src="/images/partners-slideup/partners-finepaints.png" width="281" height="126" alt="Benjamin Moore"/>
+				</div>
+				
+				<div id="sil" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="tile">
+					<img src="/images/partners-slideup/partners-silestone.png" width="281" height="126" alt="Benjamin Moore"/>
+				</div>
+				
+				
+				<div id="mag" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;" tag="wood floor">
+					<img src="/images/partners-slideup/partners-magnus.png" width="281" height="126" alt="Benjamin Moore"/>
+				</div>
 		
 		
 <script>
-    $("#ben").click(function () { 
-      // Change the lovely paragraph to be about benjamin moore
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+
+	function changeParagraph(element,cont)
+	{
+		if (element.hasClass("hilite")) {return;}
+	      
+	      // Change the lovely paragraph to be about benjamin moore
+	      $(".pbox").removeClass("hilite");
+	      element.addClass("hilite");
+	      
+	      $("#lovely-description").slideUp('slow',
+	      	function (){
+	      		$("#lovely-description p").replaceWith("<p>" + cont + "</p>");
+	      		$("#lovely-description").slideDown();
+	      });
+	}
+	
+
+    $("#ben").click(function () {
+      var content = "Benjamin Moore is the premier paint manufacturer in the USA.  They offer progressive zero VOC paints, as well as high performance paints you would expect from a paint manufacturer.  We have 3 color displays to shop from as well as a multitude of fan decks completing the Benjamin moore collection.";
+      
+      changeParagraph($(this),content);
     });
+    
     
     $("#ben").dblclick(function () { 
 	  // spawn pdf download
       //$("#ben").hide(); 
+      
     });
     
     
     
     $("#hun").click(function () { 
-      //alert('hello');
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+      var content = "Hunter Douglas is a manufacturer of quality window treatments such as blinds, shutters, etc.";
+      
+      changeParagraph($(this),content);
     });
     
     $("#hun").dblclick(function () { 
@@ -58,10 +75,9 @@
     
     
     $("#cam").click(function () { 
-      //alert('hello');
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+      var content = "Cambria is a great stone surface manufacturer.  They are partnered with Benjamin moore and offer professionally coordinated pain-countertop combinations.";
+      
+      changeParagraph($(this),content);
     });
     
     $("#cam").dblclick(function () { 
@@ -70,10 +86,9 @@
     
     
     $("#fin").click(function () { 
-      //alert('hello');
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+      var content = "Fine Paints of Europe are the highest grade paint we offer.  If you're working on a project and need the absolute highest grade materials possible, you need look no further.  Give us a call or stop in to see us about this paint.  With this paint, we offer deliveries.";
+      
+      changeParagraph($(this),content);
     });
     
     $("#fin").dblclick(function () { 
@@ -82,10 +97,9 @@
     
     
     $("#sil").click(function () { 
-      //alert('hello');
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+      var content = "Silestone is another of the great countertop and tile manufacturers we supply from.  We keep several Silestone displays on floor two.";
+      
+      changeParagraph($(this),content);
     });
     
     $("#sil").dblclick(function () { 
@@ -93,10 +107,9 @@
     });
     
     $("#mag").click(function () { 
-      //alert('hello');
-      $(".pbox").removeClass("hilite");
-      $(this).addClass("hilite");
-      //$(this).hide(); 
+      var content = "We are prowd to be the owners of a Magnus Anderson dustless floor resurfacing unit.  DUSTLESS!  This no hassle solutions is the perfect thing for a quick, woodfloor resurfacing.";
+      
+      changeParagraph($(this),content);
     });
     
     $("#mag").dblclick(function () { 
@@ -105,7 +118,7 @@
     
 </script>
 
-	</section>
+	</div>
 		
 <!--
 	<div id="upgradeBrowser">
