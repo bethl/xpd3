@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_filter :redirect_if_signed_in, :only => [:new, :create]
   before_filter :authenticate, :except => [:show, :new, :create]   # runs authenticate() before edit() and update(), etc...
   before_filter :correct_user, :only => [:edit, :update]
-  before_filter :admin_user,   :only => :destroy
+  before_filter :admin_user,   :only => [:destroy, :index]
   
   def index       # automatically renders the app/views/users/index.html.erb page at the end.  Rails 3 convention
     @title = "All users"
@@ -48,6 +48,15 @@ class UsersController < ApplicationController
   
   
   def update   # does the actual work when updating (what ever they filled out in the edit page)
+    
+    
+    @user = User.authenticate(current_user.email, params[:password][:old])
+    if @user.nil?
+      flash[:error] = "password did not match for email of current user."
+      redirect_to User.find(params[:id])
+      return
+    end
+    
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
       flash[:success] = "Profile updated."

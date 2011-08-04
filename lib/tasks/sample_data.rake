@@ -10,12 +10,18 @@ end
 
 
 def make_users
-  admin = User.create!(:email => "it@excelsiorcarpetone.com",
-                       :password => "foobar",
-                       :password_confirmation => "foobar")
+  admin = User.create!(:email => "carolyn@excelsiorcarpetone.com",
+                       :password => "111111",
+                       :password_confirmation => "111111")
   admin.toggle!(:admin)
   
-  admin.persons.create(:first_name => "greg", :last_name => "Thomas", :email => admin.email)
+  admin.persons.create(:first_name => "Carolyn", :last_name => "Manhatton", :email => admin.email)
+  
+  
+  
+
+  
+  
   
   
   99.times do |n|

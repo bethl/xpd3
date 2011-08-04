@@ -38,3 +38,16 @@
 <%= render 'users/person_info'%>
 
 <%= render 'users/employee_info'%>
+
+
+
+<% if @user.admin? %>
+
+<h1>Site Management</h1>
+
+<%= link_to "News Blast", { :controller => "news_blasts", :action => "new" } %>
+<br>
+<p>Manage Employees (set user to manager, or visa versa)</p>
+
+
+<% end %>

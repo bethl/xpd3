@@ -1,4 +1,6 @@
 class NewsBlastsController < ApplicationController
+  before_filter :admin_user, :only => [:create, :destroy, :index]
+  
   # GET /news_blasts
   # GET /news_blasts.xml
   def index
@@ -24,11 +26,13 @@ class NewsBlastsController < ApplicationController
   # GET /news_blasts/new
   # GET /news_blasts/new.xml
   def new
-    if !current_user?(User.find(1))  
+    if !current_user?(User.find(1))
       flash[:error] = "You must be logged in to use this feature."
       redirect_to users_path
       return
     end
+    
+    
     
     @news_blast = NewsBlast.new
 
@@ -94,4 +98,10 @@ class NewsBlastsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+  
+    def admin_user
+      redirect_to(root_path) unless current_user.admin?
+    end
 end

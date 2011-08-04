@@ -1,6 +1,11 @@
 <h1>Edit user</h1>
 
 <%= form_for(@user) do |f| %>
+  <div class="field">
+    <%= label "OldPassword", "Old Password" %><br />
+    <%= text_field :password, :old %>
+  </div>
+  
   <%= render 'fields', :f => f %>
   
   <div class="actions">
