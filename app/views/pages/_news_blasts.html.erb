@@ -1,6 +1,10 @@
+<% if !@news_blast.nil? %>
+
 <div id="news-blast" style="text-align:center; border-width:thin; border-style:solid; ">
 	<div id="nb-title"><p><b>NEWS BLAST</b></p> </div>
 	<div id="nb-headline"><%= @news_blast.headline%></div>
 	<div id="nb-date"><b>- <%= @news_blast.date.strftime("%b %e") %> -</b> </div>
 	<%= render :partial => 'shared/news_blast_item', :collection => @news_blast.content, :spacer_template => 'shared/spacer_part' %>  <%# auto iterates since you specify a collection, and puts in spacer between each element%>
 </div>
+
+<% end %>
