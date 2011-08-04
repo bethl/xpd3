@@ -7,6 +7,10 @@
 	
 	#partners-wrap { display: block; width: 281px; margin: 100px 0 0 20px; }  /*height + padding <= 69 to fit 8pics... plus padding */
 	
+	.slide-up-boxes {
+		height: 403px;
+		overflow:hidden;
+	}
 	
 	.slide-up-boxes a {
 		display: block;

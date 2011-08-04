@@ -134,6 +134,41 @@ a:active {
 	font-size:20px;
 }
 
+
+
+#partners-filter {
+	background-color: #00004b;
+	color:white;
+	height: 85px;
+	padding: 8px;
+}
+
+.hili {
+	background:red;
+	color:#ffdddd;
+	line-height: 30px;
+}
+
+ul#pFiltersList {
+	list-style:none;
+	-webkit-user-select: none;
+	//-khtml-user-select: none;
+	-moz-user-select: none;
+	//-o-user-select: none;
+	//user-select: none;
+	cursor:pointer;
+}
+
+ul#pFiltersList li{
+	display:inline;
+	padding:5px;
+	line-height: 30px;
+
+}
+ul#pFiltersList li:hover{
+	cursor:pointer;
+}
+
 .hilite {
 	border: solid 3px;
 	border-color: black;
@@ -193,6 +228,10 @@ a:active {
 	margin:auto;
 	width: 40%;
 }
+
+
+
+
 
 
 

@@ -6,8 +6,53 @@
 		<!-- partners -->
 		<div id="partners-wrap" style="margin:0;float:left;width:281px;">        <!--  this partners-wrap div can be posissioned very precisely, all as one thing!  -->
 			<%= render 'controls/partners_slideup' %>
+			
+			<div id="partners-filter" >
+				Display Filters:
+				<br>
+				<ul id="pFiltersList">
+					<li class="hili">Paint</li>
+					<li class="hili">Tile</li>  
+					<li class="hili">Window Treatments</li>
+					<li class="hili">Counter Tops</li>
+					<li class="hili">Carpet</li>
+					<li class="hili">Wood Floor</li>
+				</ul>
+			</div>
 		</div>
 		
+		
+		<script>
+		    $("#pFiltersList li").click(function () { 
+	    	  var tehTag = $(this).html().toLowerCase();
+		      
+		      if ($(this).hasClass("hili"))
+		      {
+		      	$(this).removeClass("hili");
+		      	var filterStr = 'a[tag="'+ tehTag + '"]';
+		      	$(filterStr).hide();
+		      }
+		      else
+		      {
+		      	$(this).addClass("hili");
+		      	var filterStr = 'a[tag="'+ tehTag + '"]';
+		      	$(filterStr).show();
+		      }
+		      //alert($(this).attr("tag"));  // prints out the attribute's value, or undefined
+		      //alert($(this).html().toLowerCase());         // prints out the contents of the elements
+		      
+		      
+		      // Hide all partner boxes who's tag == tehTag
+		      
+		      
+		      
+		      
+		    });
+		    
+		</script>
+
+		
+			
 		
 		
 		<!-- right wrap -->
@@ -47,6 +92,7 @@
 			    </object> 
 			</div>
 			
+			<!--
 			<script type="text/javascript"> 
 				<!--
 				swfobject.registerObject("FlashID");
