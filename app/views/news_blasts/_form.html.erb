@@ -12,17 +12,35 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :headline %><br />
-    <%= f.text_field :headline %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </div>
-  <div class="field">
     <%= f.label :date %><br />
     <%= f.date_select :date %> 
   </div>
+  <div class="field">
+    <%= f.label :headline %><br />
+    <%= f.text_field :headline %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content, :id => 'dyn_0', :name => 'dyn[0]' %>
+    
+    <span class="more-items">
+	  <a id="add-item-enabled" href="#add-item" onclick="additems();">more <span class="plus">+</span></a>
+	</span>
+	  
+	<span class="less-items">
+	  <a id="rem-item-enabled" href="#rem-item" onclick="remitems();">delete <span class="plus">-</span></a>
+	</span>
+  </div>
+  
+  <%= hidden_field_tag :content %>
+  
+  
+  
+  
+  
+  <div id="inputBottom"></div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

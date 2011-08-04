@@ -48,9 +48,17 @@ class NewsBlastsController < ApplicationController
   def create
     @news_blast = NewsBlast.new(params[:news_blast])
     
+    @news_blast.content = []
+  
+    params[:dyn].each do |n|
+      next if n[1] == ""
+      @news_blast.content << n[1]
+    end
+    
     respond_to do |format|
       if @news_blast.save
-        format.html { redirect_to(@news_blast, :notice => 'News blast was successfully created.') }
+        #format.html { redirect_to(@news_blast, :notice => 'News blast was successfully created.') }
+        format.html { redirect_to(root_url, :notice => 'News blast was successfully created.') }
         format.xml  { render :xml => @news_blast, :status => :created, :location => @news_blast }
       else
         format.html { render :action => "new" }

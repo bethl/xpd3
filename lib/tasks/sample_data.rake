@@ -11,8 +11,8 @@ end
 
 def make_users
   admin = User.create!(:email => "it@excelsiorcarpetone.com",
-                       :password => "kz570eif",
-                       :password_confirmation => "kz570eif")
+                       :password => "foobar",
+                       :password_confirmation => "foobar")
   admin.toggle!(:admin)
   
   admin.persons.create(:first_name => "greg", :last_name => "Thomas", :email => admin.email)

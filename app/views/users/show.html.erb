@@ -11,13 +11,12 @@
 
 <!--  OLD VERSION FROM TWITTER -->
 
-<!--
+
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
       <h1>
         <%= gravatar_for @user %>
-        <%# @user.name %>
       </h1>
       <%= render 'follow_form' if signed_in? %>
       <%# unless @user.microposts.empty? %>
@@ -28,14 +27,14 @@
       <%# end %>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%# @user.name %><br />
+      <strong>Name</strong> <%= @person.first_name %> <%= @person.last_name %> <br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
       <strong>Microposts</strong> <%# @user.microposts.count %>
-      <%= render 'shared/stats' %>
+      <%# render 'shared/stats' %>
     </td>
   </tr>
 </table>
 
 <%= render 'users/person_info'%>
 
--->
+<%= render 'users/employee_info'%>

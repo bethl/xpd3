@@ -1,4 +1,4 @@
-class Person < ActiveRecord::Base
+class Person < ActiveRecord::Base  #rename this model to customer...
   belongs_to :user
   
   #has_many :addresses #
