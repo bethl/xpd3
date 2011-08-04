@@ -134,7 +134,15 @@ a:active {
 	font-size:20px;
 }
 
+.hilite {
+	border: solid 3px;
+	border-color: black;
+}
+
+.pbox {
+	margin: 0 0 9px;
 	
+}	
 
 #partners-wrap { display: block; width: 281px; margin: 0; }  /*height + padding <= 69 to fit 8pics... plus padding */
 

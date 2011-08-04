@@ -1,7 +1,48 @@
 <% user_agent = client_browser_name %>
 
 <% if user_agent == "ie8" or user_agent == "ie7" %>
+	
+		<h2 id="partners-header">Product Suppliers</h2>
+	<section class="slide-up-boxes">
+		<div id="ben" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
+			<img src="/images/partners-slideup/ben-slideup-mockup.jpg" width="281" height="126" alt="Benjamin Moore"/>
+		</div>
+		
+		<div id="hun" class="pbox"  style="width: 281px;height: 60px;overflow: hidden;">
+			<img src="/images/partners-slideup/hunt-slideup.jpg" width="281" height="126" alt="Benjamin Moore"/>
+		</div>
+		
+<script>
+    $("#ben").click(function () { 
+      // Change the lovely paragraph to be about benjamin moore
+      $(".pbox").removeClass("hilite");
+      $(this).addClass("hilite");
+      //$(this).hide(); 
+    });
+    
+    $("#ben").dblclick(function () { 
+	  // spawn pdf download
+      //$("#ben").hide(); 
+    });
+    
+    
+    
+    $("#hun").click(function () { 
+      //alert('hello');
+      $(".pbox").removeClass("hilite");
+      $(this).addClass("hilite");
+      //$(this).hide(); 
+    });
+    
+    $("#hun").dblclick(function () { 
 
+    });
+    
+</script>
+
+	</section>
+		
+<!--
 	<div id="upgradeBrowser">
 		<h1> Old Browser Detected </h1>
 		<p>This is not an advertisement.  We (xpd) have detected that you are using <%= user_agent %> which does not support all the features that contemporary websites are designed for.  
@@ -13,8 +54,11 @@
 			<li><a href="http://www.microsoft.com/IE9">IE 9</a> - Most integrated (but more tedious to upgrade to and less feature rich)</li>
 		</ul>
 	</div>
+-->
 
 <% else %>
+
+
 
 	<h2 id="partners-header">Product Suppliers</h2>
 	<section class="slide-up-boxes">
@@ -28,7 +72,7 @@
 			<div id="top" alt="Graham Paint"></div>
 			<div id="bottom" alt="These guys do paint"></div>
 		</a>
-		
+<!--		
 		<a href="#">
 			<div id="top" alt="Fine Paints of Europe"></div>
 			<div id="bottom" alt="These guys do fine paint"></div>	
@@ -58,6 +102,7 @@
 			<div id="top" alt="Cambria"></div>
 			<div id="bottom" alt="Luxiury counter tops"></div>	
 		</a>
+-->
 	</section>
 	
 <% end %>
