@@ -175,7 +175,13 @@ a:active {
 	font-family: 'sans serif';
 	font-style: bold;
 	font-size: large;
-	color:white;
+	color:DarkBlue;
+	text-indent:45px;
+}
+
+#boldinate {
+	font-weight:normal;
+	color:#00007F;
 }
 
 #right-wrap {
