@@ -205,6 +205,8 @@ ul#pFiltersList li:hover{
 	width: 560px;
 	padding-top:10px;
 	padding-left:10px;
+	padding-bottom:14px;
+	width:550px;
 	font: 14px "Arial Black", sans-serif;
 	background: #898956;
 }
