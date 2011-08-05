@@ -30,93 +30,7 @@
 				</div>
 		
 		
-<script>
 
-	function changeParagraph(element,cont)
-	{
-		if (element.hasClass("hilite")) {return;}
-	      
-	      // Change the lovely paragraph to be about benjamin moore
-	      $(".pbox").removeClass("hilite");
-	      element.addClass("hilite");
-	      
-	      $("#lovely-description").slideUp('slow',
-	      	function (){
-	      		$("#lovely-description p").replaceWith("<p>" + cont + "</p>");
-	      		$("#lovely-description").slideDown();
-	      });
-	}
-	
-
-    $("#ben").click(function () {
-      var content = "Benjamin Moore is the premier paint manufacturer in the USA.  They offer progressive zero VOC paints, as well as high performance paints you would expect from a paint manufacturer.  We have 3 color displays to shop from as well as a multitude of fan decks completing the Benjamin moore collection.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    
-    $("#ben").dblclick(function () { 
-	  // spawn pdf download
-      //$("#ben").hide(); 
-      
-    });
-    
-    
-    
-    $("#hun").click(function () { 
-      var content = "Hunter Douglas is a manufacturer of quality window treatments such as blinds, shutters, etc.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    $("#hun").dblclick(function () { 
-
-    });
-    
-    
-    $("#cam").click(function () { 
-      var content = "Cambria is a great stone surface manufacturer.  They are partnered with Benjamin moore and offer professionally coordinated pain-countertop combinations.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    $("#cam").dblclick(function () { 
-
-    });
-    
-    
-    $("#fin").click(function () { 
-      var content = "Fine Paints of Europe are the highest grade paint we offer.  If you're working on a project and need the absolute highest grade materials possible, you need look no further.  Give us a call or stop in to see us about this paint.  With this paint, we offer deliveries.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    $("#fin").dblclick(function () { 
-
-    });
-    
-    
-    $("#sil").click(function () { 
-      var content = "Silestone is another of the great countertop and tile manufacturers we supply from.  We keep several Silestone displays on floor two.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    $("#sil").dblclick(function () { 
-
-    });
-    
-    $("#mag").click(function () { 
-      var content = "We are prowd to be the owners of a Magnus Anderson dustless floor resurfacing unit.  DUSTLESS!  This no hassle solutions is the perfect thing for a quick, woodfloor resurfacing.";
-      
-      changeParagraph($(this),content);
-    });
-    
-    $("#mag").dblclick(function () { 
-
-    });
-    
-</script>
 
 	</div>
 		
@@ -141,39 +55,50 @@
 	<h2 id="partners-header">Product Suppliers</h2>
 	<section class="slide-up-boxes">
 		
-		<a href="http://www.benjaminmoore.com/en-us/for-your-home/benjamin-moore-us-product-catalog" tag="paint">
-			<div id="top" alt="Benjamin Moore"></div>
-			<div id="bottom" alt="These guys do paint"></div>
-		</a>
+		<div class="pbox">
+			<a id="ben" href="#http://www.benjaminmoore.com/en-us/for-your-home/benjamin-moore-us-product-catalog" tag="paint">
+				<div id="top" alt="Benjamin Moore"></div>
+				<div id="bottom" alt="These guys do paint"></div>
+			</a>
+		</div>
 		
-		<a href="http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf" tag="window treatments">
-			<div id="top" alt="Hunter Douglas"></div>
-			<div id="bottom" alt="Blinds, etc."></div>	
-		</a>
+		
+		<div class="pbox">
+			<a id="hun" href="#http://www.hunterdouglas.com/pdf/We_Make_Green_Beautiful.pdf" tag="window treatments">
+				<div id="top" alt="Hunter Douglas"></div>
+				<div id="bottom" alt="Blinds, etc."></div>	
+			</a>
+		</div>
+		
+		<div class="pbox">
+			<a id="cam" href="#" tag="counter tops">
+				<div id="top" alt="Cambria"></div>
+				<div id="bottom" alt="Luxiury counter tops"></div>	
+			</a>
+		</div>
+			
 	
-		<a href="#" tag="counter tops">
-			<div id="top" alt="Cambria"></div>
-			<div id="bottom" alt="Luxiury counter tops"></div>	
-		</a>
-		
-
-		<a href="#" tag="paint">
-			<div id="top" alt="Fine Paints of Europe"></div>
-			<div id="bottom" alt="These guys do fine paint"></div>	
-		</a>
-
-				
-		<a href="#" tag="tile">
-			<div id="top" alt="Silestone"></div>
-			<div id="bottom" alt="Tile"></div>	
-		</a>
-		
-		
-		
-		<a href="#" tag="wood floor">
-			<div id="top" alt="Magnus Anderson"></div>
-			<div id="bottom" alt="Wood floors"></div>
-		</a>
+		<div class="pbox">
+			<a id="fin" href="#" tag="paint">
+				<div id="top" alt="Fine Paints of Europe"></div>
+				<div id="bottom" alt="These guys do fine paint"></div>	
+			</a>
+		</div>
+	
+		<div class="pbox">	
+			<a id="sil" href="#" tag="tile">
+				<div id="top" alt="Silestone"></div>
+				<div id="bottom" alt="Tile"></div>	
+			</a>
+		</div>
+			
+			
+		<div class="pbox">
+			<a id="mag" href="#" tag="wood floor">
+				<div id="top" alt="Magnus Anderson"></div>
+				<div id="bottom" alt="Wood floors"></div>
+			</a>
+		</div>
 <!--			
 		<a href="#">
 			<div id="top" alt="DuPont Corian"></div>
@@ -195,3 +120,80 @@
 	</section>
 	
 <% end %>
+
+
+
+<script>
+
+	function changeParagraph(element,cont)
+	{
+		if (element.hasClass("hilite")) {return;}
+	      
+	      // Change the lovely paragraph to be about benjamin moore
+	      $(".pbox").removeClass("hilite");   
+	      
+	      
+	      if (element.hasClass('pbox'))    // ie
+	      {
+	      	element.addClass("hilite");    
+	      }
+	      else                             // good browsers
+	      {
+	      	element.parent().addClass("hilite");
+	      }
+	      
+	      
+	      $("#lovely-description").slideUp('slow',
+	      	function (){
+	      		$("#lovely-description p").replaceWith("<p>" + cont + "</p>");
+	      		$("#lovely-description").slideDown();
+	      });
+	}
+	
+
+    $("#ben").click(function () {
+      var content = "Benjamin Moore is the premier paint manufacturer in the USA.  They offer progressive zero VOC paints, as well as high performance paints you would expect from a paint manufacturer.  We have 3 color displays to shop from as well as a multitude of fan decks completing the Benjamin moore collection.";
+      
+      changeParagraph($(this),content);
+    });
+     
+    $("#ben").dblclick(function () { 
+	  // spawn pdf download
+    });
+    
+    $("#hun").click(function () { 
+      var content = "Hunter Douglas is a manufacturer of quality window treatments such as blinds, shutters, etc.";
+      
+      changeParagraph($(this),content);
+    });
+
+    
+    $("#cam").click(function () { 
+      var content = "Cambria is a great stone surface manufacturer.  They are partnered with Benjamin moore and offer professionally coordinated pain-countertop combinations.";
+      
+      changeParagraph($(this),content);
+    });
+    
+
+    $("#fin").click(function () { 
+      var content = "Fine Paints of Europe are the highest grade paint we offer.  If you're working on a project and need the absolute highest grade materials possible, you need look no further.  Give us a call or stop in to see us about this paint.  With this paint, we offer deliveries.";
+      
+      changeParagraph($(this),content);
+    });
+
+    
+    
+    $("#sil").click(function () { 
+      var content = "Silestone is another of the great countertop and tile manufacturers we supply from.  We keep several Silestone displays on floor two.";
+      
+      changeParagraph($(this),content);
+    });
+    
+
+    
+    $("#mag").click(function () { 
+      var content = "We are proud to be the owners of a Magnus Anderson dustless floor resurfacing unit.  DUSTLESS!  This no hassle solutions is the perfect thing for a quick, woodfloor resurfacing.";
+      
+      changeParagraph($(this),content);
+    });
+</script>

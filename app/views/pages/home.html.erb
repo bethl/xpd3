@@ -29,8 +29,6 @@
 			
 			function include(arr, obj)
 			{
-				
-				
 				return (indexOfM(arr, obj) != -1);
 			}
 			
@@ -44,10 +42,7 @@
 				//alert('ie fails');
 				return -1;
 			}
-			
-			
-			
-			
+
 			//antiFilter.push("ha");
 			//antiFilter.splice(0,1);
 			//alert(include(antiFilter,"ha"));
@@ -58,6 +53,7 @@
 			
 		    $("#pFiltersList li").click(function () { 
 	    	  var tehTag = $(this).html().toLowerCase();
+	    	  
 	    	  
 		      var filterStrA = 'a[tag="'+ tehTag + '"]';                  // for good browsers
 		      var filterStrB = 'div[tag="' + jQuery.trim(tehTag) + '"]';  // for suck browsers
@@ -80,15 +76,10 @@
 		      else                                  // ENABLE FILTER
 		      {
 		      	$(this).addClass("hili");
-		      	//var filterStrA = 'a[tag="'+ tehTag + '"]';
-		      	//var filterStrB = 'div[tag="' + jQuery.trim(tehTag) + '"]';
 		      	
-		      	// For the first time, if the antiFilter list is empty, that means we're going to hid every element before showing the one desired...
-		      	if (antiFilter.length == 0)
-		      	{
-		      		//alert('antiFilter[0]');
-		      		$(".slide-up-boxes a").hide();  // et. al.
-		      		$(".pbox").hide();  // ie
+		      	// For the first time, if the antiFilter list is empty, that means we're going to hide every element before showing the one desired...
+		      	if (antiFilter.length == 0)	{
+		      		$(".pbox").hide();  // both!
 		      	}
 		      	
 		      	if (!include(antiFilter,tehTag))   // if the antiFilter doesn't have the tag, then add it, otherwise, it's weird that it already had the tag... do nothing (prevent duplications...)
@@ -97,8 +88,10 @@
 		      	}
 		      	
 		      	
-		      	$(filterStrA).show();
+		      	$(filterStrA).parent().show();
 		      	$(filterStrB).show();
+
+		      	
 		      }
 		    });
 		</script>

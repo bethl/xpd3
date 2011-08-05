@@ -9,8 +9,12 @@
 	
 	.slide-up-boxes {
 		display:block;
-		height: 403px;
+		height: 408px;
 		overflow:hidden;
+	}
+	
+	.slide-up-boxes div {
+		margin: 0 0 9px 0;
 	}
 	
 	.slide-up-boxes a {
@@ -18,9 +22,11 @@
 		background: #e33;
 		border: 1px solid #ccc;
 		height: 57px;
-		margin: 0 0 9px 0;
+		//margin: 0 0 9px 0;
 		overflow: hidden;
 	}
+	
+	
 	
 	.slide-up-boxes #top  {
 		height: 57px;
@@ -33,7 +39,8 @@
 	}
 	
 	.slide-up-boxes a:hover #top {
-		margin-top: -57px;
+		//margin-top: -57px;
+		margin-top: -66px;         // this changes when I take the margin out of slide-up-boxes a and put it in div
 	}
 	
 	.slide-up-boxes #bottom{
@@ -57,29 +64,29 @@
 	}
 	
 	
-	.slide-up-boxes a:nth-child(1) #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockup.jpg) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(1) #bottom { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockup.jpg) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#ben #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockup.jpg) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#ben #bottom { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockup.jpg) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(2) #top       { background: #c73b1b url(/images/partners-slideup/hunt-slideup.jpg) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(2) #bottom { background: #367db2 url(/images/partners-slideup/hunt-slideup.jpg) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#hun #top       { background: #c73b1b url(/images/partners-slideup/hunt-slideup.jpg) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#hun #bottom { background: #367db2 url(/images/partners-slideup/hunt-slideup.jpg) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(3) #top       { background: #c73b1b url(/images/partners-slideup/partners-cambria.png) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(3) #bottom { background: #393838 url(/images/partners-slideup/partners-cambria.png) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#cam #top       { background: #c73b1b url(/images/partners-slideup/partners-cambria.png) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#cam #bottom { background: #393838 url(/images/partners-slideup/partners-cambria.png) no-repeat bottom center; background-size: 281px 120px ; }
 
-	.slide-up-boxes a:nth-child(4) #top       { background: #c73b1b url(/images/partners-slideup/partners-finepaints.png) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(4) #bottom { background: #393838 url(/images/partners-slideup/partners-finepaints.png) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#fin #top       { background: #c73b1b url(/images/partners-slideup/partners-finepaints.png) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#fin #bottom { background: #393838 url(/images/partners-slideup/partners-finepaints.png) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(5) #top       { background: #c73b1b url(/images/partners-slideup/partners-silestone.png) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(5) #bottom { background: #393838 url(/images/partners-slideup/partners-silestone.png) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#sil #top       { background: #c73b1b url(/images/partners-slideup/partners-silestone.png) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#sil #bottom { background: #393838 url(/images/partners-slideup/partners-silestone.png) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(6) #top       { background: #c73b1b url(/images/partners-slideup/partners-magnus.png) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(6) #bottom { background: #393838 url(/images/partners-slideup/partners-magnus.png) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#mag #top       { background: #c73b1b url(/images/partners-slideup/partners-magnus.png) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a#mag #bottom { background: #393838 url(/images/partners-slideup/partners-magnus.png) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(7) #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(7) #bottom { background: #393838 url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a# #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a# #bottom { background: #393838 url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat bottom center; background-size: 281px 120px ; }
 	
-	.slide-up-boxes a:nth-child(8) #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat top center; background-size: 281px 120px ; }
-	.slide-up-boxes a:nth-child(8) #bottom { background: #393838 url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat bottom center; background-size: 281px 120px ; }
+	.slide-up-boxes div a# #top       { background: #c73b1b url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat top center; background-size: 281px 120px ; }
+	.slide-up-boxes div a# #bottom { background: #393838 url(/images/partners-slideup/ben-slideup-mockupz.jpg) no-repeat bottom center; background-size: 281px 120px ; }
 	
 	#partners-header {
 		text-align: center; 
