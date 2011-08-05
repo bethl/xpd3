@@ -39,7 +39,6 @@
 						return i;
 					}
 				}
-				//alert('ie fails');
 				return -1;
 			}
 
@@ -64,7 +63,7 @@
 		      	
 		      	antiFilter.splice(indexOfM(antiFilter, tehTag),1);
 		      	
-		      	$(filterStrA).hide();
+		      	$(filterStrA).parent().hide();
 		      	$(filterStrB).hide();
 		      	
 		      	if (antiFilter.length == 0)
