@@ -42,6 +42,7 @@ Xpd3::Application.routes.draw do
 
   get "page/news"
   
+  match "/brendan", :to => 'pages#brendan'
   
   match '/template', :to => 'pages#template'
   

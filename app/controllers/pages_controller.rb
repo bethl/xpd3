@@ -36,6 +36,8 @@ class PagesController < ApplicationController
   end
   
   def template
-    
+  end
+  
+  def brendan
   end
 end
