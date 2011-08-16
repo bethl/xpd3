@@ -1,0 +1,604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Demo: CSS Gradient Box</title>
+
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+	font-family: 'Questrial',sans-serif;
+	padding: 0px;
+	margin: 0px;
+	background: url("/images/bg.png") repeat-y scroll center top #0A0F19;
+}
+
+p {
+	margin:0;
+	padding:0;
+}
+
+.page-wrap{
+    background: none repeat scroll 0 0 #95AE3D;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 9px 20px;
+    position: relative;
+    width: 1000px;
+}
+
+#section-head{
+
+    /*background: url("/images/gradient-left.png") repeat-y scroll 25% 25px #fff; */
+	overflow:hidden;
+    position: relative;
+    z-index: 99999;    
+}
+
+#green-buffer{
+	background: #95AE3D;
+	float:right;
+}
+
+.encapsulate{
+    width: 1000px;
+    /*height:500px;*/
+    background: #95AE3D;
+}
+
+#brand{
+	width:170px;
+	padding-left:6px;
+	padding-bottom: 10px;
+}
+
+
+
+#teal{
+	background:#649197;
+	height:2px;
+}
+
+
+#black-brand-img{
+	background:#000;
+	color:#fff;
+	background:url('images/co110Wide.png') 32px 4px #000; 
+	background-repeat:no-repeat;
+	padding-left:20px;
+	height:24px;
+}
+
+#nav-side{
+	float:left;
+	      letter-spacing:0.1em;
+		  font-size: 14px;
+	width:180px;
+	background: #95AE3D;
+}
+
+#menu{
+	font-family: 'Questrial', sans-serif;
+        letter-spacing:0.1em;
+		    font-size: 14px;
+	line-height:30px;
+	color:#fff;
+	list-style:none outside none;
+        padding-bottom:50px;
+}
+
+ul.info {
+	list-style:none outside none;
+	margin-left:100px;
+	padding-left: 1.5em;
+}
+
+ul.info {
+	margin-left: 0;
+	    font-size: 12px;
+	padding-left: 1.5em;
+	list-style:none outside none;
+}
+
+
+
+#content{
+	padding-left: 10px;
+	background:#fff;
+	width:700px;
+	min-height:500px;
+	float:left;
+	font-size:14px;
+}
+
+#menu-filters{
+	padding-left: 0px;
+	list-style: none outside none;
+}
+#menu-filters li{
+	font-size: 16px;
+	letter-spacing: 0.04em;
+	padding: 10px;
+	display: inline;
+	color: #95AE3D;
+}
+.page-wrap #section-head .encapsulate #nav-side #menu li {
+	font-size: 14px;
+}
+
+#right-wrap {
+	float:right;
+	width:150px;
+	margin-top:25px;
+}
+
+#news-blasts {
+    font: 14px Georgia,serif;
+}
+
+#news-blast {
+	padding:15px;
+	text-align:left; 
+	background:#eeeeff;
+}
+
+#news-blasts p {
+    color: #333333;
+    font-family: Arial,Helvetica,sans-serif;
+}
+#news-blasts p {
+}
+#nb-headline {
+    margin: 4px 0 0;
+    line-height: 15px;
+}
+#nb-date {
+    /*color: #92CAE4;*/
+    margin: 12px 0 0px;
+}
+#centered {
+    text-align: center;
+}
+
+</style>
+
+
+
+
+
+<!-- begin partners-grid css -->
+<script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
+<style>
+
+#partners-grid{
+	overflow:hidden;
+}
+
+td{
+	background: #f1f2ee;
+	width: 85px;
+	height: 85px;
+}
+
+.hilite{
+	border-color: transparent transparent #ffffee transparent;
+}
+
+.triangleU {
+border-color: transparent transparent #f1f2ee transparent;
+border-style: solid;
+border-width: 0px 42px 10px 42px;
+height: 0px;
+width: 0px;
+
+position:relative;
+left: 16px;
+}
+
+.triangleD {
+border-color: #f1f2ee transparent transparent  transparent;
+border-style: solid;
+border-width: 10px 42px 0px 42px;
+height: 0px;
+width: 0px;
+clear:both;
+position:relative;
+left: 16px;
+}
+
+#ben{
+	background: #f1f2ee url('/images/partners-grid/paintLgos/finePaints.png');
+}
+
+#cabot{
+	background: #f1f2ee url('/images/partners-grid/stainLgos/cabot.png');
+}
+
+#gra{
+	background: #f1f2ee url('/images/partners-grid/paintStainLgos/graham.png');
+}
+#pratt{
+	background: #f1f2ee url('/images/partners-grid/paintLgos/PrattLambert.png');
+}
+
+.partner-grid{
+	position:relative;
+	left:0px;
+	top:0px;
+	background-color:#f1f2ee;
+	width:85px;
+	height:85px;
+	/* margin: 15px 0 0 15px; */
+	opacity:.7;
+}
+
+.gs{
+	position:relative;
+	left:0px;
+	top:0px;
+	background-color:#f1f2ee;
+	width:85px;
+	height:85px;
+	margin: 15px 0 0 15px;
+	opacity:.7;
+}
+
+.partner-grid:hover{
+	opacity:1;
+}
+
+.grid-col{
+	float:left;
+}
+
+.highlightit img{
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+-moz-opacity: 0.5;
+opacity: 0.5;
+}
+
+.highlightit:hover img{
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+}
+
+#lovely-picture{
+	display:none;
+	position:relative;
+	top:15px; 
+	left:15px; 
+	height:285px; 
+	width:370px;
+}
+
+#lovely-description{
+	display:none;
+	margin-top:30px;
+	margin-left:115px;
+}
+
+#inner-members{
+	width:500px;
+}
+
+#gc2, #gc3, #gc4, #gc5{
+	
+}
+
+.hilite{
+	opacity:1;
+	/* change color to darker? */
+}
+
+</style>
+
+<script>
+
+function selectedItem(element){
+	//  1) Hide the 4x4 grid items (use oppacity)
+	
+	//  2) changeContent(itemChosen);
+	
+	//  3) If already setup, then just change the paragraph.  
+	//alert('hi');
+	
+	var content = "The way text is handled is, it will be a site admin function.  Then, ajax will be used to query for the literature on demand.  Here is essentially how it works http://stackoverflow.com/questions/5223699/new-to-rails-3-ajax-request-with-json-response";
+	
+	
+	$("#gc2, #gc3, #gc4, #gc5").hide();
+	$("#lovely-picture").show('slow', function () {
+		changeContent(element,content);
+	});
+}
+
+
+function changeContent(element, content){
+	// 1)  Display the image over the 4x3 area on the grid
+	
+	// 2)  Display the text over the 4x1 area beneath the image
+	//alert('hi');
+	
+	var imagePath = element.attr('tag');
+	
+	//alert(imagePath);
+	
+	if (element.hasClass("hilite")) {return;}
+	
+	$(".partner-grid").removeClass("hilite");      // remove selectivity of all partner boxes
+	
+	element.addClass("hilite");                    // add selectivity to this box
+	
+	$("#lovely-description").slideUp('slow',
+      	function (){
+      		$("#lovely-description p").replaceWith("<p>" + content + "</p>");
+      		$("#lovely-description").slideDown();
+    });
+      
+}
+
+
+
+$(window).load(
+	function() {
+		
+		//hide the lovely paragraph and the image
+		
+		function scrollUp(){
+			// move the column of things up, then lazzily load the next item to become visible
+			
+			
+		}
+		
+		
+		$(".partner-grid").click(function () {
+			var element = $(this);
+			var content = "The way text is handled is, it will be a site admin function.  Then, ajax will be used to query for the literature on demand.  Here is essentially how it works http://stackoverflow.com/questions/5223699/new-to-rails-3-ajax-request-with-json-response";
+			
+			selectedItem(element);
+			
+		})
+		
+		
+		
+		
+		
+		function changeParagraph(element,cont)
+		{
+			if (element.hasClass("hilite")) {return;}
+		      
+		      // Change the lovely paragraph to be about benjamin moore
+		      $(".pbox").removeClass("hilite");   
+		      
+		      
+		      if (element.hasClass('pbox'))    // ie
+		      {
+		      	element.addClass("hilite");    
+		      }
+		      else                             // good browsers
+		      {
+		      	element.parent().addClass("hilite");
+		      }
+		      
+		      
+		      $("#lovely-description").slideUp('slow',
+		      	function (){
+		      		$("#lovely-description p").replaceWith("<p>" + cont + "</p>");
+		      		$("#lovely-description").slideDown();
+		      });
+		}
+});
+</script>
+
+
+<!-- end partners-grid css (and js)-->
+
+
+
+
+</head>
+<body>
+		<div class="page-wrap">
+			<div id="section-head">
+
+				
+				<div class="encapsulate">
+					
+					<div id="nav-side">
+						
+						<div>
+							<a href="#">
+								<img id="brand" src="/images/epdMainLgo.png"/>
+							</a>
+						</div>
+						
+						<div id="teal"></div>
+						
+						
+							
+							<div id="black-brand-img">
+
+							</div>
+							
+						
+					
+						<ul id="menu">
+							<li>Home</li>
+							<li>About Us</li>
+							<li>Gallery</li>
+							<li>Specials</li>
+
+							<li>Products</li>
+							<li>News</li>
+							<li>Directions</li>
+						</ul>
+					
+					
+						<div id="directions">
+							<ul class="info">
+                            
+								<li>701 Highway 7</li>
+
+								<li>Excelsior MN 55331</li>
+						    	<li>phone: 952.474.0162</li>
+								<li>fax: 952.474.0162</li>
+							</ul>
+						</div>
+				
+				
+						<div id="hours">
+							<ul class="info">
+
+								<li>Hours: M-F 7:30-6:30;</li>
+								<li>SAT 9-5; SUN 11-4</li>
+							</ul>
+						</div>
+					</div> <!-- /nav-side -->
+					
+					
+					
+					<div id="content">
+						<h1 style="padding-left:5px;">What are you shopping for today?</h1>
+
+						<ul id="menu-filters">
+							<li>Flooring</li>
+							<li>Paint/Wallpaper</li>
+							<li>Window Treatments</li>
+							<li>Fabric</li>
+							<li>Cabinets/Knobs</li>
+
+							
+						</ul>
+						
+						
+						
+						<div id="right-wrap">
+							<div id="news-blast">
+								<div id="nb-title">
+									<p>
+									<b><i>NEWS BLAST</i></b>
+									</p>
+								</div>
+								<div id="nb-headline">Anniversary <br/>Celebration </br>Recap</div>
+								<div id="nb-date">
+									<i>- Aug 8 -</i>
+								</div>
+								<p>Thank you to everyone who attended.</p>
+								<br>
+								<p>Weren't those bagpipes fabulous!</p>
+								<br>
+								<p>Stay tuned for the raffle results.</p>
+							</div>
+						</div>
+						
+						
+						
+						
+						<div id="partners-grid">
+							
+							<div id="grid">
+	
+	<a href='#scroll-upnow' onclick="scrollUpNow()">
+		<div id="scroll-up" class="triangleU"></div>
+	</a>
+	
+	<div id="inner-members">
+		<!-- col 1 -->
+		<div id="gc1" class="grid-col">           <!-- the template for these is that you need a mother div for the background color, an inner div for the image and click event-->
+			                             <!-- jQuery provides them with the click functionality.  Search for $(#ben) to find where.-->
+			
+			
+			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
+			
+			
+			<div class="gs"><div id="pratt" class="partner-grid" tag="/images/"></div></div>
+			
+			<div class="gs"><div id="ben" class="partner-grid" tag="/images/"></div></div>
+			
+			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+		</div>
+		
+		
+		<!-- col 2 -->
+		<div id="gc2" class="grid-col">
+			
+			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="ben" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+		</div>
+		
+		
+		<!-- col 3 -->
+		<div id="gc3" class="grid-col">
+			
+			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="ben" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+		</div>
+		
+		
+		<!-- col 4 -->
+		<div id="gc4" class="grid-col">
+			
+			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="ben" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+		</div>
+		
+		
+		<!-- col 5 -->
+		<div id="gc5" class="grid-col">
+			
+			<div class="gs"><div id="cabot" class="partner-grid"></div> </div>
+			
+			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="ben" class="partner-grid"></div></div>
+			
+			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+		</div>
+			
+		<img id="lovely-picture" src='images/rails.png'>
+		<div id="lovely-description">
+			hi there.  This is a lovely paragraph.  hi there.  This is a lovely paragraph.  
+		</div>
+	
+	</div>
+	
+	
+	<div id="scroll-down" class="triangleD">
+	</div>
+</div>
+							
+							
+						</div>
+						
+						
+
+						
+
+						
+					</div>
+                    
+					
+			  </div>
+	
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
