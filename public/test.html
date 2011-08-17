@@ -4,24 +4,17 @@
   <style>
   p { color:red; margin:5px; cursor:pointer; }
   p.hilite { background:yellow; }
+  
+  
   </style>
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-  <p>First Paragraph</p>
-
-  <p>Second Paragraph</p>
-  <div>it's a div</div>
-<script>
-    $("div").click(function () { 
-      $(this).slideUp(); 
-    });
-    $("div").hover(function () {
-      $(this).addClass("hilite");
-    }, function () {
-      $(this).removeClass("hilite");
-    });
-</script>
-
+	
+	<div class="example5wrap">
+		<div class="example example5">box-shadow</div>
+		<div class="ie-shadow">blur</div>
+	</div>
+	
 </body>
 </html>
