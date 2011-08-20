@@ -1,37 +1,138 @@
-/*   these are paints/stains */
+/*  <!--flooring - carpets --> */
+
+#kara{
+	background: #f1f2ee url('/images/partners-grid/kara-s.png');
+}
+
+#sha{
+	background: #f1f2ee url('/images/partners-grid/sha-s.png');
+}
+
+#tuf{
+	background: #f1f2ee url('/images/partners-grid/tuf-s.png');
+}
+
+/*   <!-- flooring - wood -->*/
+
+#mag{
+	background: #f1f2ee url('/images/partners-grid/mag-s.png');
+}
+
+
+/*   <!-- flooring - vinyl -->*/
+
+/*   <!-- flooring tile -->*/
+
+
+
+
+/*   <!-- paints/stains -->*/
 
 #cabot{
 	background: #f1f2ee url('/images/partners-grid/cabot-s.png');
-	content: "This is some sample text that is displayed on the website!";
+	content: "With Cabot Stain wood care products your floors will be durable and beautiful.";
 }
+
 
 #ben{
 	background: #f1f2ee url('/images/partners-grid/ben-s.png');
+	content: "Benjamin Moore paints keep this dining room feeling cozy with a deep shade of red (2083-10).";
 }
 
 #fin{
 	background: #f1f2ee url('/images/partners-grid/fin-s.png');
+	content: "This vintage bench was painted with Van Gogh (2070) from the Fine Paints of Europe Classic Collection.";
 }
-
 
 
 #gra{
 	background: #f1f2ee url('/images/partners-grid/gra-s.png');
+	content: "Graham paint sets off the white cabinetry in this kitchen.";
+
 }
 
 #old{
 	background: #f1f2ee url('/images/partners-grid/old-s.png');
+	content: "An Old Master stain and finish enhances the natural beauty of the wood.";
+
 }
 
 
 #pratt{
 	background: #f1f2ee url('/images/partners-grid/Pratt-s.png');
+	content: "Pratt & Lambert paint showcases the detailed woodwork.";
+
 }
 
-/*  these are carpets */
-#kara{
-	background: #f1f2ee url('/images/partners-grid/kara-s.png');
+
+
+#tuf{
+	background: #f1f2ee url('/images/partners-grid/tuf-s.png');
 }
+
+#zar{
+	background: #f1f2ee url('/images/partners-grid/zar-s.png');
+	content: "ZAR offers  wood finishes, interior and exterior stains.";
+
+}
+/*   <!-- faux finishes -->*/
+
+/*   <!-- wallpaper -->*/
+
+/*   <!-- window treatments - hunterdouglas -->*/
+
+
+#hun{
+	background: #f1f2ee url('/images/partners-grid/hun-s.png');
+}
+
+
+
+/*   <!-- window treatments - fabric -->*/
+
+/*   <!-- fabric upholstery -->*/
+
+#stro{
+	background: #f1f2ee url('/images/partners-grid/stro-s.png');
+}
+
+#rob{
+	background: #f1f2ee url('/images/partners-grid/rob-s.png');
+}
+
+#max{
+	background: #f1f2ee url('/images/partners-grid/max-s.png');
+}
+
+#kra{
+	background: #f1f2ee url('/images/partners-grid/kra-s.png');
+}
+
+#kas{
+	background: #f1f2ee url('/images/partners-grid/kas-s.png');
+}
+
+
+/*   <!-- cabinets knobs -->*/
+
+
+
+#red{
+	background: #f1f2ee url('/images/partners-grid/red-s.png');
+}
+
+#eme{
+	background: #f1f2ee url('/images/partners-grid/eme-s.png');
+}
+
+#top{
+	background: #f1f2ee url('/images/partners-grid/top-s.png');
+}
+
+#col{
+	background: #f1f2ee url('/images/partners-grid/col-s.png');
+}
+
 
 
 

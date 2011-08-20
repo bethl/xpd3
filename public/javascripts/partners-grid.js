@@ -124,6 +124,7 @@ function removeUnwantedElements(chosenTag){
 
 function addWantedElements(chosenTag){
 	// search gc2-gc5 and pick up any elements that have the chosen tag
+	//alert('you seak: ' + chosenTag);
 	$('#gc2').children().each(function(i){
 		subTerms = $(this).children();
 		var id = subTerms.attr('id');
@@ -132,6 +133,32 @@ function addWantedElements(chosenTag){
 		if (subTerms.attr('tag').indexOf(chosenTag) != -1)   // if this item DOES contain the chosen tag, move it to #iScroll
 			subTerms.parent().appendTo('#iScroll');
 	});
+	
+	$('#gc3').children().each(function(i){
+		subTerms = $(this).children();
+		var id = subTerms.attr('id');
+		if (typeof subTerms.attr('tag') == 'undefined') return true;  // skip to next if this doesn't even have a tag...
+		
+		if (subTerms.attr('tag').indexOf(chosenTag) != -1)   // if this item DOES contain the chosen tag, move it to #iScroll
+			subTerms.parent().appendTo('#iScroll');
+	});
+	$('#gc4').children().each(function(i){
+		subTerms = $(this).children();
+		var id = subTerms.attr('id');
+		if (typeof subTerms.attr('tag') == 'undefined') return true;  // skip to next if this doesn't even have a tag...
+		
+		if (subTerms.attr('tag').indexOf(chosenTag) != -1)   // if this item DOES contain the chosen tag, move it to #iScroll
+			subTerms.parent().appendTo('#iScroll');
+	});
+	$('#gc5').children().each(function(i){
+		subTerms = $(this).children();
+		var id = subTerms.attr('id');
+		if (typeof subTerms.attr('tag') == 'undefined') return true;  // skip to next if this doesn't even have a tag...
+		
+		if (subTerms.attr('tag').indexOf(chosenTag) != -1)   // if this item DOES contain the chosen tag, move it to #iScroll
+			subTerms.parent().appendTo('#iScroll');
+	});
+	
 }
 
 
