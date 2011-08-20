@@ -1,0 +1,220 @@
+/*   these are paints/stains */
+
+#cabot{
+	background: #f1f2ee url('/images/partners-grid/cabot-s.png');
+	content: "This is some sample text that is displayed on the website!";
+}
+
+#ben{
+	background: #f1f2ee url('/images/partners-grid/ben-s.png');
+}
+
+#fin{
+	background: #f1f2ee url('/images/partners-grid/fin-s.png');
+}
+
+
+
+#gra{
+	background: #f1f2ee url('/images/partners-grid/gra-s.png');
+}
+
+#old{
+	background: #f1f2ee url('/images/partners-grid/old-s.png');
+}
+
+
+#pratt{
+	background: #f1f2ee url('/images/partners-grid/Pratt-s.png');
+}
+
+/*  these are carpets */
+#kara{
+	background: #f1f2ee url('/images/partners-grid/kara-s.png');
+}
+
+
+
+
+
+
+
+
+
+/* End of Grid Item IDs */
+
+
+
+
+
+
+#headerQ {
+	margin: 19px 0;
+	padding-left: 5px;
+}
+
+#menu-filters{
+	padding-left: 0px;
+	list-style: none outside none;
+}
+#menu-filters li{
+	font-size: 16px;
+	letter-spacing: 0.04em;
+	padding: 10px;
+	display: inline;
+	color: #95AE3D;
+}
+
+#partners-grid{
+	overflow:hidden;
+	padding-bottom:20px;
+}
+
+td{
+	background: #f1f2ee;
+	width: 85px;
+	height: 85px;
+}
+
+.hilite{
+	border-color: transparent transparent #ffffee transparent;
+}
+
+.triangle{
+border-style: solid;
+height: 0px;
+width: 0px;
+position:relative;
+left: 16px;
+cursor: hand;
+z-index:1;
+
+opacity:0;
+filter: alpha(opacity=0);
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+.triangleU {
+border-color: transparent transparent #f1f2ee transparent;
+border-width: 0px 42px 10px 42px;
+margin-bottom:-2px;
+}
+
+.triangleD {
+border-color: #f1f2ee transparent transparent  transparent;
+border-width: 10px 42px 0px 42px;
+clear:both;
+}
+
+
+#spacer{
+	height:10px;
+}
+
+
+#scroll-down{
+	content: "hi";
+}
+
+
+.buttonBinder{
+	width:100px;
+	height: 23px;
+	
+	overflow:hidden;
+	clear:both;
+	float:left;
+}
+
+.partner-grid{
+	position:relative;
+	left:0px;
+	top:0px;
+	background-color:#f1f2ee;
+	width:85px;
+	height:85px;
+	/* margin: 15px 0 0 15px; */
+	opacity:.7;
+	filter: alpha(opacity=70);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	background-image:url('/images/partners-grid/paintLgos/PrattLambert.png');
+	border:solid 1px black;
+}
+
+.gs{
+	position:relative;
+	left:0px;
+	top:0px;
+	background-color:#f1f2ee;
+	width:85px;
+	height:85px;
+	margin: 0px 0 15px 15px;
+	opacity:.7;
+}
+
+.partner-grid:hover{
+	opacity:1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.grid-col{
+	float:left;
+}
+
+.highlightit img{
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+-moz-opacity: 0.5;
+opacity: 0.5;
+}
+
+.highlightit:hover img{
+filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+}
+
+.lovely-picture{
+	display:none;
+	position:relative;
+	top:15px; 
+	left:15px; 
+	height:285px; 
+	width:370px;
+}
+
+#lovely-description{
+	display:none;
+	margin-top:14px;
+	margin-left:115px;
+}
+
+#inner-members{
+	width:502px;
+}
+#inner-members img {
+	top:0;
+}
+
+#gc1{
+	overflow:hidden;
+	width:102px;
+	height:400px;
+	position:relative;
+}
+
+#iScroll{
+	position:absolute;
+	top:0px;
+	left:0px;
+	padding:0;
+	margin:0;
+}
+
+.hilite{
+	opacity:1;
+	filter: alpha(opacity=100);
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	/* change color to darker? */
+	border-color:#C73B1B;
+}

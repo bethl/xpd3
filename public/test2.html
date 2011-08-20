@@ -2,476 +2,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Demo: CSS Gradient Box</title>
+<title>Xpd</title>
 
 <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-<style type="text/css">
-body {
-	font-family: 'Questrial',sans-serif;
-	padding: 0px;
-	margin: 0px;
-	background: url("/images/bg.png") repeat-y scroll center top #0A0F19;
-}
-
-p {
-	margin:0;
-	padding:0;
-}
-
-img {
-    border-style: none
-}
-
-.page-wrap{
-    background: none repeat scroll 0 0 #95AE3D;
-    margin: 0 auto;
-    overflow: hidden;
-    padding: 9px 20px;
-    position: relative;
-    width: 1000px;
-}
-
-#section-head{
-    /*background: url("/images/gradient-left.png") repeat-y scroll 25% 25px #fff; */
-	overflow:hidden;
-    position: relative;
-    z-index: 99999;    
-}
-
-#green-buffer{
-	background: #95AE3D;
-	float:right;
-}
-
-.encapsulate{
-    width: 1000px;
-    /*height:500px;*/
-    background: #95AE3D;
-}
-
-#brand{
-	width:170px;
-	padding-left:6px;
-	padding-bottom: 10px;
-}
-
-
-
-#teal{
-	background:#649197;
-	height:2px;
-}
-
-
-#black-brand-img{
-	background:#000;
-	color:#fff;
-	background:url('images/co110Wide.png') 32px 4px #000; 
-	background-repeat:no-repeat;
-	padding-left:20px;
-	height:24px;
-}
-
-#nav-side{
-	float:left;
-	      letter-spacing:0.1em;
-		  font-size: 14px;
-	width:180px;
-	background: #95AE3D;
-}
-
-#menu{
-	font-family: 'Questrial', sans-serif;
-        letter-spacing:0.1em;
-		    font-size: 14px;
-	line-height:30px;
-	color:#fff;
-	list-style:none outside none;
-        padding-bottom:50px;
-}
-
-ul.info {
-	list-style:none outside none;
-	margin-left:100px;
-	padding-left: 1.5em;
-}
-
-ul.info {
-	margin-left: 0;
-	    font-size: 12px;
-	padding-left: 1.5em;
-	list-style:none outside none;
-}
-
-
-
-#content{
-	padding-left: 10px;
-	background:#fff;
-	width:700px;
-	min-height:500px;
-	float:left;
-	font-size:14px;
-}
-
-#menu-filters{
-	padding-left: 0px;
-	list-style: none outside none;
-}
-#menu-filters li{
-	font-size: 16px;
-	letter-spacing: 0.04em;
-	padding: 10px;
-	display: inline;
-	color: #95AE3D;
-}
-.page-wrap #section-head .encapsulate #nav-side #menu li {
-	font-size: 14px;
-}
-
-#shadow {
-    display: block;
-    position: relative;
-    /* top: 5px;
-    left: 5px; */
-     width: 1px; /* match target width */
-     height: 1px; /* match target height */
-    /*z-index: 0; */
-    background: #000;
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40');
-}
-
-
-.ie-shadow {
-    display: block;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 102px; /* match target width */
-    height: 102px; /* match target height */
-    z-index: 1;
-    background: #000;
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='15', MakeShadow='true', ShadowOpacity='0.40');
-}
-
-
-#right-wrap {
-	float:right;
-	width:150px;
-	margin-top:25px;
-	margin-right:7px;
-	box-shadow:				0 0 5px #000;
-	-o-box-shadow:			0 0 5px #000;
-	-moz-box-shadow:		0 0 5px #000;
-	-webkit-box-shadow:	0 0 5px #000;
-}
-
-#news-blasts {
-    font: 14px Georgia,serif;
-}
-
-#news-blast {
-	padding:15px;
-	text-align:left; 
-	background:#eeeeff;
-}
-
-#news-blasts p {
-    color: #333333;
-    font-family: Arial,Helvetica,sans-serif;
-}
-#news-blasts p {
-}
-#nb-headline {
-    margin: 4px 0 0;
-    line-height: 15px;
-}
-#nb-date {
-    /*color: #92CAE4;*/
-    margin: 12px 0 0px;
-}
-#centered {
-    text-align: center;
-}
-
-</style>
-
-
-
-
+<link type=text/css rel='stylesheet' href='/stylesheets/m.css'>
 
 <!-- begin partners-grid css -->
 <script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
-<style>
-
-#partners-grid{
-	overflow:hidden;
-}
-
-td{
-	background: #f1f2ee;
-	width: 85px;
-	height: 85px;
-}
-
-.hilite{
-	border-color: transparent transparent #ffffee transparent;
-}
-
-.triangleU {
-border-color: transparent transparent #f1f2ee transparent;
-border-style: solid;
-border-width: 0px 42px 10px 42px;
-height: 0px;
-width: 0px;
-
-position:relative;
-left: 16px;
-}
-
-.triangleD {
-border-color: #f1f2ee transparent transparent  transparent;
-border-style: solid;
-border-width: 10px 42px 0px 42px;
-height: 0px;
-width: 0px;
-clear:both;
-position:relative;
-left: 16px;
-}
-
-#fin{
-	background: #f1f2ee url('/images/partners-grid/fin-s.png');
-}
-
-#cabot{
-	background: #f1f2ee url('/images/partners-grid/cabot-s.png');
-}
-
-#gra{
-	background: #f1f2ee url('/images/partners-grid/gra-s.png');
-}
-#pratt{
-	background: #f1f2ee url('/images/partners-grid/Pratt-s.png');
-}
-
-.partner-grid{
-	position:relative;
-	left:0px;
-	top:0px;
-	background-color:#f1f2ee;
-	width:85px;
-	height:85px;
-	/* margin: 15px 0 0 15px; */
-	opacity:.7;
-	background-image:url('/images/partners-grid/paintLgos/PrattLambert.png');
-}
-
-.gs{
-	position:relative;
-	left:0px;
-	top:0px;
-	background-color:#f1f2ee;
-	width:85px;
-	height:85px;
-	margin: 15px 0 0 15px;
-	opacity:.7;
-}
-
-.partner-grid:hover{
-	opacity:1;
-}
-
-.grid-col{
-	float:left;
-}
-
-.highlightit img{
-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
--moz-opacity: 0.5;
-opacity: 0.5;
-}
-
-.highlightit:hover img{
-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
--moz-opacity: 1;
-opacity: 1;
-}
-
-.lovely-picture{
-	display:none;
-	position:relative;
-	top:15px; 
-	left:15px; 
-	height:285px; 
-	width:370px;
-}
-
-#lovely-description{
-	display:none;
-	margin-top:30px;
-	margin-left:115px;
-}
-
-#inner-members{
-	width:500px;
-}
-
-#gc2, #gc3, #gc4, #gc5{
-	
-}
-
-.hilite{
-	opacity:1;
-	/* change color to darker? */
-}
-
-</style>
-
-<script>
-
-function changeContent(element, content){
-	// 1)  Display the image over the 4x3 area on the grid
-	// 2)  Display the text over the 4x1 area beneath the image
-	
-	changeSelectedButton(element);
-	
-	$("#lovely-description").slideUp('slow',
-      	function (){
-      		$("#lovely-description p").replaceWith("<p>" + content + "</p>");
-      		$("#lovely-description").slideDown();
-    });
-}
-
-function changeSelectedButton(element){
-	$(".partner-grid").removeClass("hilite");      // remove selectivity of all partner boxes
-	element.addClass("hilite");                    // add selectivity to this box
-}
-
-
-$(window).load(
-	function() {
-		var toggleChip = true;
-		
-		//hide the lovely paragraph and the image
-		
-		function scrollUp(){
-			// move the column of things up, then lazzily load the next item to become visible
-		}
-		
-		
-		$(".partner-grid").click(function () {
-			var element = $(this);
-			var content = "The way text is handled is, it will be a site admin function.  Then, ajax will be used to query for the literature on demand.  Here is essentially how it works http://stackoverflow.com/questions/5223699/new-to-rails-3-ajax-request-with-json-response";
-			
-			// check if a selection is already made
-			if (element.hasClass('hilite')) return;
-			
-			if ($(".hilite").length < 1)
-			{
-				// Switch to details mode
-				$("#gc2, #gc3, #gc4, #gc5").hide();
-				
-				// $(".lovely-picture").show('slow', function () {
-					// changeContent(element,content);
-				// });
-				changePicture(element);  // and content... damned refactoring
-			}
-			else
-			{
-				//change lovely picture
-				var imagePath = element.attr('tag');
-				changePicture(element);  // and content... damned refactoring
-			}
-		})
-		
-		function changePicture(element){
-			var imgpath = element.attr('imgpath');
-			createNewImage(element);
-		}
-		
-		function createNewImage(element) {
-			// the image path is based on the #id of the button elements
-			var id = element.attr('id');
-			
-			var imgpath = "/images/partners-grid/" + id + "-l.png";    // the naming convention must be perfect on your images!!
-			var imgMarkup = "<img id='" + id + "' " + "class='lovely-picture next-lp' src='" + imgpath + "' style='display: none;background:#ffffff'/>";
-			
-			if ($('img#'+id).length > 0) // if the image has already been made... delete it!  We'll make it again.  It will still be cached! 
-			{
-				//alert('in');
-				$('img#'+id).remove();
-			}
-			
-			if (toggleChip)             // this convention causes a beautiful back and forth effect when loading the images
-			{
-				$(".current-lp").after(imgMarkup);   // create a new image with the proper source
-				toggleChip = false;
-			}
-			else
-			{
-				$(".current-lp").before(imgMarkup);
-				toggleChip = true;
-			}
-			
-			changeSelectedButton(element);
-			
-			// Hide the text, then hid picture on callback.....................
-			$("#lovely-description").fadeOut('100');
-			
-			$('.lovely-picture').hide('slow');   // on callback, show the next-lp
-			
-			$('.next-lp').show('slow', function (){
-				// Then show the text in this callback.................................
-	      		 $("#lovely-description p").replaceWith("<p>" + content + "</p>");
-	      		 $("#lovely-description").slideDown();
-			});
-			
-			$('.next-lp').removeClass('next-lp');
-			$('.next-lp').addClass('current-lp');
-		}
-		
-		
-		
-		function changeParagraph(element,cont)
-		{
-			if (element.hasClass("hilite")) {return;}
-		      
-		      // Change the lovely paragraph to be about benjamin moore
-		      $(".pbox").removeClass("hilite");   
-		      
-		      
-		      if (element.hasClass('pbox'))    // ie
-		      {
-		      	element.addClass("hilite");    
-		      }
-		      else                             // good browsers
-		      {
-		      	element.parent().addClass("hilite");
-		      }
-		      
-		      
-		      $("#lovely-description").slideUp('slow',
-		      	function (){
-		      		$("#lovely-description p").replaceWith("<p>" + cont + "</p>");
-		      		$("#lovely-description").slideDown();
-		      });
-		}
-});
-</script>
-
-
+<script type="text/javascript" src="/javascripts/partners-grid.js"></script>
+<link type=text/css rel='stylesheet' href='/stylesheets/partners-grid.css'>
 <!-- end partners-grid css (and js)-->
-
-
-
-
 </head>
 <body>
 		<div class="page-wrap">
 			<div id="section-head">
-
-				
 				<div class="encapsulate">
 					
 					<div id="nav-side">
@@ -483,21 +27,13 @@ $(window).load(
 						</div>
 						
 						<div id="teal"></div>
-						
-						
-							
-							<div id="black-brand-img">
+						<div id="black-brand-img"></div>
 
-							</div>
-							
-						
-					
 						<ul id="menu">
 							<li>Home</li>
 							<li>About Us</li>
 							<li>Gallery</li>
 							<li>Specials</li>
-
 							<li>Products</li>
 							<li>News</li>
 							<li>Directions</li>
@@ -506,9 +42,7 @@ $(window).load(
 					
 						<div id="directions">
 							<ul class="info">
-                            
 								<li>701 Highway 7</li>
-
 								<li>Excelsior MN 55331</li>
 						    	<li>phone: 952.474.0162</li>
 								<li>fax: 952.474.0162</li>
@@ -518,7 +52,6 @@ $(window).load(
 				
 						<div id="hours">
 							<ul class="info">
-
 								<li>Hours: M-F 7:30-6:30;</li>
 								<li>SAT 9-5; SUN 11-4</li>
 							</ul>
@@ -526,9 +59,8 @@ $(window).load(
 					</div> <!-- /nav-side -->
 					
 					
-					
 					<div id="content">
-						<h1 style="padding-left:5px;">What are you shopping for today?</h1>
+						<h1 id="headerQ">What are you shopping for today?</h1>
 
 						<ul id="menu-filters">
 							<li>Flooring</li>
@@ -536,72 +68,9 @@ $(window).load(
 							<li>Window Treatments</li>
 							<li>Fabric</li>
 							<li>Cabinets/Knobs</li>
-
-							
 						</ul>
-						
-						<script>
-							/* Created by Martin Hintzmann 2008 martin [a] hintzmann.dk
- * MIT (http://www.opensource.org/licenses/mit-license.php) licensed.
- *
- * Version: 0.1
- *
- * Requires:
- *   jQuery 1.2+
- */
-// This is used for showing the shadow effect on the newsblast window
-(function($) {
-	$.fn.boxShadow = function(xOffset, yOffset, blurRadius, shadowColor) {
-		if (!$.browser.msie) return;
-		return this.each(function(){
-			$(this).css({
-				position:	"relative",
-				zoom: 		1,
-				zIndex:		"2"
-			});
-			$(this).parent().css({
-					position:	"relative"
-			});
-			
-			var div=document.createElement("div");
-			$(this).parent().append(div);
 
-			var _top, _left, _width, _height;
-			if (blurRadius != 0) {
-				$(div).css("filter", "progid:DXImageTransform.Microsoft.Blur(pixelRadius="+(blurRadius)+", enabled='true')");
-				_top = 		yOffset-blurRadius-1;
-				_left =		xOffset-blurRadius-1;
-				_width =		$(this).outerWidth()+1;
-				_height =	$(this).outerHeight()+1;
-			} else {
-				_top = 		yOffset;
-				_left =		xOffset;
-				_width = 	$(this).outerWidth();
-				_height = 	$(this).outerHeight();
-			}
-			$(div).css({
-				top: 			_top,
-				left:			_left,
-				width:		_width,
-				height:		_height,
-				background:	shadowColor,
-				position:	"absolute",
-				zIndex:		1
-			});
-			
-	  });
-	};
-})(jQuery);
 
-$(window).load(
-	function() {
-						// This is used for showing the shadow effect on the newsblast window
-						$('#right-wrap').boxShadow( '560', '130', '10', "#000" );
-					});
-						</script>
-						
-						<!--<div id="shadow">-->
-							
 						<div id="right-wrap">
 							<div id="news-blast">
 								<div id="nb-title">
@@ -619,102 +88,81 @@ $(window).load(
 								<br>
 								<p>Stay tuned for the raffle results.</p>
 							</div>
-							
-						
 						</div>
-						<!-- hello -->
-						<!--</div>-->
-						
-						<div id="partners-grid">
-							
-							<div id="grid">
+
+
+<div id="partners-grid">
 	
-	<a href='#scroll-upnow' onclick="scrollUpNow()">
-		<div id="scroll-up" class="triangleU"></div>
+	<a onclick="gcScrollUp()">
+		<div id="scroll-up" class="triangle triangleU"></div>
 	</a>
+	<div id="spacer"></div>
 	
 	<div id="inner-members">
 		<!-- col 1 -->
 		<div id="gc1" class="grid-col">           <!-- the template for these is that you need a mother div for the background color, an inner div for the image and click event-->
-			                             <!-- jQuery provides them with the click functionality.  Search for $(#ben) to find where.-->
-			
-			
-			<div class="gs"><div id="cabot" class="partner-grid" imgpath="/images/rails.png"></div></div>
-			
-			<div class="gs"><div id="pratt" class="partner-grid" imgpath="/images/rails.png"></div></div>
-			
-			<div class="gs"><div id="fin" class="partner-grid" imgpath="/images/rails.png"></div></div>
-			
-			<div class="gs"><div id="gra" class="partner-grid" imgpath="/images/rails.png"></div></div>
+			                                      <!-- jQuery provides them with the click functionality.  Search for $(#ben) to find where.-->
+			<!-- <div id="iFrame" style="height:400px;"> -->
+				<div id="iScroll">
+					<div class="gs"><div id="cabot" class="partner-grid" tag="stain"></div></div>
+					<div class="gs"><div id="pratt" class="partner-grid" tag="paint"></div></div>
+					<div class="gs"><div id="fin" class="partner-grid" tag="paint"></div></div>
+					<div class="gs"><div id="gra" class="partner-grid" tag="paint"></div></div>
+				</div>
+			<!-- </div> -->
 		</div>
-		
 		
 		<!-- col 2 -->
 		<div id="gc2" class="grid-col">
-			
-			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
-			
+			<div class="gs"><div id="ben" class="partner-grid" tag="paint"></div></div>
 			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="fin" class="partner-grid"></div></div>
-			
-			<div class="gs"><div id="gra" class="partner-grid"></div></div>
+			<div class="gs"><div id="kara" class="partner-grid"></div></div>
 		</div>
-		
 		
 		<!-- col 3 -->
 		<div id="gc3" class="grid-col">
-			
 			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="fin" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="gra" class="partner-grid"></div></div>
 		</div>
-		
 		
 		<!-- col 4 -->
 		<div id="gc4" class="grid-col">
-			
 			<div class="gs"><div id="cabot" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="fin" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="gra" class="partner-grid"></div></div>
 		</div>
 		
-		
 		<!-- col 5 -->
 		<div id="gc5" class="grid-col">
-			
 			<div class="gs"><div id="cabot" class="partner-grid"></div> </div>
-			
 			<div class="gs"><div id="pratt" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="fin" class="partner-grid"></div></div>
-			
 			<div class="gs"><div id="gra" class="partner-grid"></div></div>
 		</div>
 			
 		<img id="first-lp" class="lovely-picture current-lp" src='images/rails.png'>
 		
 		<div id="lovely-description">
-			hi there.  This is a lovely paragraph.  hi there.  This is a lovely paragraph.  
+			<p></p>
 		</div>
 	
 	</div>
 	
 	
-	<div id="scroll-down" class="triangleD">
+
+	<div class="buttonBinder">
+		<a onclick="gcScrollDown()" style="width:100px;" tabIndex="-1">
+			<div id="scroll-down" class="triangle triangleD"></div>
+		</a>
 	</div>
+
 </div>
-							
-							
-						</div>
+
+
 
 					</div>
                     
