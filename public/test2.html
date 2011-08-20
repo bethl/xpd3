@@ -63,11 +63,47 @@
 						<h1 id="headerQ">What are you shopping for today?</h1>
 
 						<ul id="menu-filters">
-							<li>Flooring</li>
-							<li>Paint/Wallpaper</li>
-							<li>Window Treatments</li>
-							<li>Fabric</li>
-							<li>Cabinets/Knobs</li>
+							<li id="mnu-flooring" class='hl'><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Flooring</a></li>
+							<li id="mnu-walls"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Paint/Wallpaper</a></li>
+							<li id="mnu-windows"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Window Treatments</a></li>
+							<li id="mnu-fabric"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Fabric</a></li>
+							<li id="mnu-cabinets"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Cabinets/Knobs</a></li>
+							<li id="mnu-countertops"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Countertops</a></li>
+							<li id="mnu-tile"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Tile</a></li>
+						</ul>
+						
+						<ul id="flt-flooring" class="submenu hl">
+							<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
+							<li><a onclick="fltByTag($(this).html())">Wood</a></li>
+							<li><a onclick="fltByTag($(this).html())">Vinyl</a></li>
+							<li><a onclick="fltByTag($(this).html())">Tile</a></li>
+						</ul>
+						
+						<ul id="flt-walls" class="submenu">
+							<li><a onclick="fltByTag($(this).html())">Paint</a></li>
+							<li><a onclick="fltByTag($(this).html())">Stain</a></li>
+							<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
+							<li><a onclick="fltByTag($(this).html())">Paint Gadgets</a></li>
+						</ul>
+						
+						<ul id="flt-windows" class="submenu"> <!-- window treatements -->
+							<li><a href="#" onclick="fltByTag($(this).html())">Window Treatements</a></li>
+						</ul>
+						
+						<ul id="flt-fabric" class="submenu">
+							<li><a href="#" onclick="fltByTag($(this).html())">Windows</a></li>
+							<li><a href="#" onclick="fltByTag($(this).html())">Upholstery</a></li>
+						</ul>
+						
+						<ul id="flt-cabinets" class="submenu">
+							<li><a href="#" onclick="fltByTag($(this).html())">Cabinets</a></li>
+							<li><a href="#" onclick="fltByTag($(this).html())">Knobs</a></li>
+						</ul>
+						
+						<ul id="flt-countertops" class="submenu">
+						</ul>
+						
+						<ul id="flt-tile" class="submenu">
 						</ul>
 
 

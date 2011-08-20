@@ -79,21 +79,36 @@ $(window).load(
 			
 			if ($(".hilite").length < 1)    // If this is your first time clicking one of the little boxes...
 			{
-				$("#gc2, #gc3, #gc4, #gc5").hide(); // Switch to details mode
 				// change gc1 to include only items of the specified tag.  
 				var chosenTag = $(this).attr('tag');   // TODO, make it so this chooses only the first tag
-				removeUnwantedElements(chosenTag);
-				addWantedElements(chosenTag);
-				
-				checkDisabledScrollButtons();  // displays scroll buttons if needed
+				detailsOfTag(chosenTag);
 			}
-			
 			changeDisplayed(element);  // and content... damned refactoring
 		})
 		
 		// This is used for showing the shadow effect on the newsblast window
-		$('#right-wrap').boxShadow( '559', '148', '10', "#000" );
+		var ovvs = $('#news-blast').offset();
+		var xLeft = ovvs['left'] - 624;   // 559
+		var xTop = ovvs['top'] - 6;      // 148
+		
+		//alert(xLeft);
+		
+		$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
+		
+		//alert(ovvs['top']);   // var xLeft = ovvs['left'] - 634
 });
+
+
+
+
+function detailsOfTag(tag){
+	$("#gc2, #gc3, #gc4, #gc5").hide(); // Switch to details mode
+	// change gc1 to include only items of the specified tag.  
+	removeUnwantedElements(tag);
+	addWantedElements(tag);
+	
+	checkDisabledScrollButtons();  // displays scroll buttons if needed
+}
 
 
 function removeUnwantedElements(chosenTag){
@@ -266,5 +281,39 @@ function changeParagraph(element)
 	$("#lovely-description p").replaceWith("<p>" + content + "</p>");
 }
 
+
+
+
+
+
+//******************** FILTER MENU STUFF, TAG RELATED *********************
+
+
+
+function fltByTag(tag){ // used in submenu to change tag to display
+	// lowerCaseAndReplaceSpaces(text)
+	tag = tag.toLowerCase().replace(/ /g, '-');
+	//alert(tag);
+	
+	detailsOfTag(tag);
+	$("#iScroll").children().each(function(i){
+		subTerms = $(this).children()//.attr('id');  //.attr('id');
+		//alert(subTerms);
+		changeDisplayed(subTerms);
+		return false;
+	});
+}
+
+function showSubmenu(submenu){ // get rid of old menu
+	// deal with submenu
+	$('ul.hl').removeClass('hl');
+	// deal with mainmenu
+	$('li.hl').removeClass('hl');
+	
+	// in with new menu
+	$('#flt-' + submenu).addClass('hl');
+	// deal with main menu
+	$('#mnu-' + submenu).addClass('hl');  // deal with main menu
+}
 
 
