@@ -318,6 +318,18 @@ function changeParagraph(element)
 
 
 function fltByTag(tag){ // used in submenu to change tag to display
+	$('#submenus ul li').removeClass('hl-submenu');
+	$('ul.hl li').each(function(){
+		// check through until you find the one you just clicked and set it's class to hl
+		if ($(this).children().html()== tag)
+			{
+				$(this).addClass('hl-submenu');
+				return false;
+			}
+		
+	});
+	
+	
 	// lowerCaseAndReplaceSpaces(text)
 	tag = tag.toLowerCase().replace(/ /g, '-');
 	//alert(tag);
@@ -329,6 +341,14 @@ function fltByTag(tag){ // used in submenu to change tag to display
 		changeDisplayed(subTerms);
 		return false;
 	});
+	
+	//setSubmenuHighlight();
+}
+
+function setSubmenuHighlight(){
+	var wrds = $('ul.hl li').html();
+	alert(wrds);
+	$('ul.hl li').addClass('hl');
 }
 
 function showSubmenu(submenu){ // get rid of old menu

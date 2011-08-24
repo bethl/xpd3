@@ -185,6 +185,7 @@
 	padding-left: 0px;
 	list-style: none outside none;
 	display:none;
+	background:white;
 }
 
 .submenu.hl{
@@ -196,6 +197,10 @@
 	padding: 10px;
 	display: inline;
 	cursor:pointer;
+}
+
+li.hl-submenu {
+	color:red;
 }
 
 #flt-walls li{

@@ -15,7 +15,6 @@
 </head>
 <body>
 		<div class="page-wrap">
-			<div id="section-head">
 				<div class="encapsulate">
 					
 					<div id="nav-side">
@@ -71,39 +70,42 @@
 							<li id="mnu-countertops"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Countertops</a></li>
 						</ul>
 						
-						<ul id="flt-flooring" class="submenu hl">
-							<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
-							<li><a onclick="fltByTag($(this).html())">Wood</a></li>
-							<li><a onclick="fltByTag($(this).html())">Vinyl</a></li>
-							<li><a onclick="fltByTag($(this).html())">Tile</a></li>
-						</ul>
 						
-						<ul id="flt-walls" class="submenu">
-							<li><a onclick="fltByTag($(this).html())">Paint</a></li>
-							<li><a onclick="fltByTag($(this).html())">Stain</a></li>
-							<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
-							<li><a onclick="fltByTag($(this).html())">Paint Gadgets</a></li>
-						</ul>
-						
-						<ul id="flt-windows" class="submenu"> <!-- window treatements -->
-							<li><a  onclick="fltByTag($(this).html())">Window Treatements</a></li>
-						</ul>
-						
-						<ul id="flt-fabric" class="submenu">
-							<li><a onclick="fltByTag($(this).html())">Windows</a></li>
-							<li><a onclick="fltByTag($(this).html())">Upholstery</a></li>
-						</ul>
-						
-						<ul id="flt-cabinets" class="submenu">
-							<li><a onclick="fltByTag($(this).html())">Cabinets</a></li>
-							<li><a onclick="fltByTag($(this).html())">Knobs</a></li>
-						</ul>
-						
-						<ul id="flt-countertops" class="submenu">
-						</ul>
-						
-						<ul id="flt-tile" class="submenu">
-						</ul>
+						<div id="submenus">
+							<ul id="flt-flooring" class="submenu hl">
+								<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
+								<li><a onclick="fltByTag($(this).html())">Wood</a></li>
+								<li><a onclick="fltByTag($(this).html())">Vinyl</a></li>
+								<li><a onclick="fltByTag($(this).html())">Tile</a></li>
+							</ul>
+							
+							<ul id="flt-walls" class="submenu">
+								<li><a onclick="fltByTag($(this).html())">Paint</a></li>
+								<li><a onclick="fltByTag($(this).html())">Stain</a></li>
+								<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
+								<li><a onclick="fltByTag($(this).html())">Paint Gadgets</a></li>
+							</ul>
+							
+							<ul id="flt-windows" class="submenu"> <!-- window treatements -->
+								<li><a  onclick="fltByTag($(this).html())">Window Treatements</a></li>
+							</ul>
+							
+							<ul id="flt-fabric" class="submenu">
+								<li><a onclick="fltByTag($(this).html())">Windows</a></li>
+								<li><a onclick="fltByTag($(this).html())">Upholstery</a></li>
+							</ul>
+							
+							<ul id="flt-cabinets" class="submenu">
+								<li><a onclick="fltByTag($(this).html())">Cabinets</a></li>
+								<li><a onclick="fltByTag($(this).html())">Knobs</a></li>
+							</ul>
+							
+							<ul id="flt-countertops" class="submenu">
+							</ul>
+							
+							<ul id="flt-tile" class="submenu">
+							</ul>
+						</div>
 
 
 						<div id="right-wrap">
@@ -127,7 +129,6 @@
 
 
 <div id="partners-grid">
-	<div id="displayFilters">Showing:  Paint and Stain.</div>
 	<a onclick="gcScrollUp()">
 		<div id="scroll-up" class="triangle triangleU"></div>
 	</a>
@@ -206,8 +207,6 @@
 					
 			  </div>
 	
-			</div>
-
 		</div>
 
 	</body>

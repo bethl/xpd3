@@ -23,11 +23,6 @@ img {
     width: 1000px;
 }
 
-#section-head{
-	overflow:hidden;
-    position: relative;
-    z-index: 99999;    
-}
 
 #green-buffer{
 	background: #95AE3D;
