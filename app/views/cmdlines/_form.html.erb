@@ -1,0 +1,34 @@
+
+<style>
+.cmdline input{
+	width:200px
+}
+</style>
+
+
+<%# form for command line...  Comand window is above...%>
+<%= form_for(@cmdline) do |f| %>
+  <% if @cmdline.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cmdline.errors.count, "error") %> prohibited this cmdline from being saved:</h2>
+
+      <ul>
+      <% @cmdline.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="cmdline">
+    <%= f.label :cmd %><br />
+    <%= f.text_field :cmd %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br />
+    <%= f.text_field :response %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

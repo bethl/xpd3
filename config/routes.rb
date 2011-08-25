@@ -1,5 +1,7 @@
 Xpd3::Application.routes.draw do
   
+  resources :cmdlines
+
   resources :users do
     member do
       get :following, :followers

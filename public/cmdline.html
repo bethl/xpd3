@@ -1,0 +1,72 @@
+<style>
+body{
+	background:#000;
+}
+
+.cmdline{
+	width:500px;
+	background:#000;
+	color:#fff;
+	border:solid 2px #ccc;
+}
+
+.cmdline *{
+	margin:0;
+	padding:0;
+	color:#fff;
+}
+
+.cmdline input{
+	width:100%;
+	background:#444;
+	color:#fff;
+	style:inline;
+	border-style:none;
+}
+</style>
+
+
+<script>
+	function handleKeyPress(e,form){
+		var key=e.keyCode || e.which;
+		if (key==13){
+			//form.submit();
+			alert('hi');
+		}
+	}
+</script>
+
+
+
+<div class="cmdline">
+	<p>Using username "root".
+	<br/>
+	Authenticating with public key "rsa-key-20110602"
+	<br/>
+	Linux sweets 2.6.32-5-686 #1 SMP Wed May 18 07:08:50 UTC 2011 i686
+	<br/>
+	
+	<br/>
+	The programs included with the Debian GNU/Linux system are free software;
+	the exact distribution terms for each program are described in the<br/>
+	individual files in /usr/share/doc/*/copyright.
+	
+	<br/>
+	<br/>
+	Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+	permitted by applicable law.
+	<br/>
+	Last login: Wed Aug 24 17:39:22 2011 from xcal.local
+	<br/>
+	</p>
+	
+	<!-- <span contenteditable="true" style="max-width: 200px;">sdfsd</span> -->
+
+	<table>
+		<tr>
+			<td>root@host:/#&nbsp;</td>
+			<td style="width:100%;"><input type="text" onkeypress="handleKeyPress(event,this.form)" value="HEY"></input></td>
+		</tr>
+	</table>
+	
+</div>

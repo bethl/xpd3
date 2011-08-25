@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cmd:</b>
+  <%= @cmdline.cmd %>
+</p>
+
+<p>
+  <b>Response:</b>
+  <%= @cmdline.response %>
+</p>
+
+
+<%= link_to 'Edit', edit_cmdline_path(@cmdline) %> |
+<%= link_to 'Back', cmdlines_path %>

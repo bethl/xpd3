@@ -1,0 +1,25 @@
+<h1>Listing cmdlines</h1>
+
+<table>
+  <tr>
+    <th>Cmd</th>
+    <th>Response</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cmdlines.each do |cmdline| %>
+  <tr>
+    <td><%= cmdline.cmd %></td>
+    <td><%= cmdline.response %></td>
+    <td><%= link_to 'Show', cmdline %></td>
+    <td><%= link_to 'Edit', edit_cmdline_path(cmdline) %></td>
+    <td><%= link_to 'Destroy', cmdline, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cmdline', new_cmdline_path %>
