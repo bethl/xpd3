@@ -15,6 +15,7 @@
 </head>
 <body>
 		<div class="page-wrap">
+			<div id="section-head">
 				<div class="encapsulate">
 					
 					<div id="nav-side">
@@ -60,52 +61,71 @@
 					
 					<div id="content">
 						<h1 id="headerQ">What are you shopping for today?</h1>
-
+						
+						<!-- SECTION WHERE YOU DEFINE THE MENU ITEMS FOR THE GRID -->
 						<ul id="menu-filters">
 							<li id="mnu-flooring" class='hl'><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Flooring</a></li>
-							<li id="mnu-walls"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Paint/Wallpaper</a></li>
+                            <span class=separater>|<span>
+
+
+							<li id="mnu-paint"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Paint</a></li>                            
+                            <span class=separater>|<span>
+                            
+                            <li id="mnu-stain"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Stain</a></li>
+                            <span class=separater>|<span>
+                            
+							<li id="mnu-wallpaper"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Wallpaper</a></li>
+                            <span class=separater>|<span>
+                            
 							<li id="mnu-windows"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Window Treatments</a></li>
-							<li id="mnu-fabric"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Fabric</a></li>
+                            <span class=separater>|<span>
+                            
+							<li id="mnu-fabric"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Uphostery</a></li>
+                            <span class=separater>|<span>
+                            
 							<li id="mnu-cabinets"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Cabinets/Knobs</a></li>
+                            <span class=separater>|<span>
+                            
 							<li id="mnu-countertops"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Countertops</a></li>
 						</ul>
 						
+						<!-- SECTION WHERE YOU DEFINE THE SUB-MENU ITEMS -->
 						
-						<div id="submenus">
-							<ul id="flt-flooring" class="submenu hl">
-								<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
-								<li><a onclick="fltByTag($(this).html())">Wood</a></li>
-								<li><a onclick="fltByTag($(this).html())">Vinyl</a></li>
-								<li><a onclick="fltByTag($(this).html())">Tile</a></li>
-							</ul>
-							
-							<ul id="flt-walls" class="submenu">
-								<li><a onclick="fltByTag($(this).html())">Paint</a></li>
-								<li><a onclick="fltByTag($(this).html())">Stain</a></li>
-								<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
-								<li><a onclick="fltByTag($(this).html())">Paint Gadgets</a></li>
-							</ul>
-							
-							<ul id="flt-windows" class="submenu"> <!-- window treatements -->
-								<li><a  onclick="fltByTag($(this).html())">Window Treatements</a></li>
-							</ul>
-							
-							<ul id="flt-fabric" class="submenu">
-								<li><a onclick="fltByTag($(this).html())">Windows</a></li>
-								<li><a onclick="fltByTag($(this).html())">Upholstery</a></li>
-							</ul>
-							
-							<ul id="flt-cabinets" class="submenu">
-								<li><a onclick="fltByTag($(this).html())">Cabinets</a></li>
-								<li><a onclick="fltByTag($(this).html())">Knobs</a></li>
-							</ul>
-							
-							<ul id="flt-countertops" class="submenu">
-							</ul>
-							
-							<ul id="flt-tile" class="submenu">
-							</ul>
-						</div>
+						<ul id="flt-flooring" class="submenu hl">
+							<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
+							<li><a onclick="fltByTag($(this).html())">Wood</a></li>
+							<li><a onclick="fltByTag($(this).html())">Tile</a></li>
+							<li><a onclick="fltByTag($(this).html())">Luxury Vinyl</a></li>
+                            <li><a onclick="fltByTag($(this).html())">Sheet Vinyl</a></li>
+                            <li><a onclick="fltByTag($(this).html())">Linoleum</a></li>
+						</ul>
+						
+						<ul id="flt-walls" class="submenu">
+							<li><a onclick="fltByTag($(this).html())">Paint</a></li>
+							<li><a onclick="fltByTag($(this).html())">Stain</a></li>
+							<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
+							<li><a onclick="fltByTag($(this).html())">Paint Gadgets</a></li>
+						</ul>
+						
+						<ul id="flt-windows" class="submenu"> <!-- window treatements -->
+							<li><a  onclick="fltByTag($(this).html())">Window Treatements</a></li>
+						</ul>
+						
+						<ul id="flt-fabric" class="submenu">
+							<li><a onclick="fltByTag($(this).html())">Windows</a></li>
+							<li><a onclick="fltByTag($(this).html())">Upholstery</a></li>
+						</ul>
+						
+						<ul id="flt-cabinets" class="submenu">
+							<li><a onclick="fltByTag($(this).html())">Cabinets</a></li>
+							<li><a onclick="fltByTag($(this).html())">Knobs</a></li>
+						</ul>
+						
+						<ul id="flt-countertops" class="submenu">
+						</ul>
+						
+						<ul id="flt-tile" class="submenu">
+						</ul>
 
 
 						<div id="right-wrap">
@@ -129,6 +149,7 @@
 
 
 <div id="partners-grid">
+	
 	<a onclick="gcScrollUp()">
 		<div id="scroll-up" class="triangle triangleU"></div>
 	</a>
@@ -207,6 +228,8 @@
 					
 			  </div>
 	
+			</div>
+
 		</div>
 
 	</body>

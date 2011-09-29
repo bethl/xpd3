@@ -1,3 +1,5 @@
+<script type="text/javascript" src="/javascripts/jquery-1.6.2.min.js"></script>
+
 <style>
 body{
 	background:#000;
@@ -27,45 +29,62 @@ body{
 
 
 <script>
+var bla;
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")},
+  async: false  
+})
+
+jQuery.fn.submitWithAjax = function() {
+    return $.post('cmdlines',             // the '.js' makes the respond_to do |format| invoke the .js block instead of the default html
+    { cmdline: {cmd: $('#cmdline_cmd').attr('value')}},                    // this just converts the form into a serialized array that we send to the server 
+    null, 
+    "text");   // the "script" tells it to execute what ever gets returned as javascript!!  "text" means, it just returns that string
+    
+ }
+
 	function handleKeyPress(e,form){
 		var key=e.keyCode || e.which;
 		if (key==13){
-			//form.submit();
-			alert('hi');
+			var ret = $("#new_cmdline").submitWithAjax()['responseText'];
+			alert(ret);
+			
+			
+			// put the response right into the #responses
+			$('#responses').append("<p>BLA</p>");
+			
 		}
 	}
+	
 </script>
 
-
-
+<!-- How do I add a new line, and delete the last line if the lines can span multiple lines, yet the height is fixed???  -->
 <div class="cmdline">
-	<p>Using username "root".
-	<br/>
-	Authenticating with public key "rsa-key-20110602"
-	<br/>
-	Linux sweets 2.6.32-5-686 #1 SMP Wed May 18 07:08:50 UTC 2011 i686
-	<br/>
-	
-	<br/>
-	The programs included with the Debian GNU/Linux system are free software;
-	the exact distribution terms for each program are described in the<br/>
-	individual files in /usr/share/doc/*/copyright.
-	
-	<br/>
-	<br/>
-	Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-	permitted by applicable law.
-	<br/>
-	Last login: Wed Aug 24 17:39:22 2011 from xcal.local
-	<br/>
-	</p>
+	<div id="responses">
+		<p>Using username "root".</p>
+		<p>Authenticating with public key "rsa-key-20110602"</p>
+		
+		<p>Linux sweets 2.6.32-5-686 #1 SMP Wed May 18 07:08:50 UTC 2011 i686</p>
+		
+		<br/>
+		<p>The programs included with the Debian GNU/Linux system are free software;
+		the exact distribution terms for each program are described in the</p>
+		<p>individual files in /usr/share/doc/*/copyright.</p>
+		
+		<br/>
+		<p>Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+		permitted by applicable law.</p>
+		<p>Last login: Wed Aug 24 17:39:22 2011 from xcal.local</p>
+	</div>
 	
 	<!-- <span contenteditable="true" style="max-width: 200px;">sdfsd</span> -->
 
 	<table>
 		<tr>
-			<td>root@host:/#&nbsp;</td>
-			<td style="width:100%;"><input type="text" onkeypress="handleKeyPress(event,this.form)" value="HEY"></input></td>
+			<td id="prefix">root@host:/#&nbsp;</td>
+			<td style="width:100%;">
+				<input id="cmdline_cmd" name="cmdline[cmd]" type="text" onkeypress="handleKeyPress(event,this.form)" value="HEY"></input>
+			</td>
 		</tr>
 	</table>
 	

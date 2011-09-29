@@ -25,9 +25,15 @@ class CmdlinesController < ApplicationController
   # GET /cmdlines/new.xml
   def new
     @cmdline = Cmdline.new
-
+    
+    
+    
     respond_to do |format|
-      format.html # new.html.erb
+      #format.html # new.html.erb
+      format.html do
+        render :xml => @cmdline
+      end
+        
       format.xml  { render :xml => @cmdline }
     end
   end
@@ -41,10 +47,21 @@ class CmdlinesController < ApplicationController
   # POST /cmdlines.xml
   def create
     @cmdline = Cmdline.new(params[:cmdline])
+    
+    case @cmdline[:cmd]
+    when "HEY"
+      resp = "it was 'HEY'"
+    when "ls"
+      resp = `ls config`
+    else
+      resp = "unknown command"
+    end
 
     respond_to do |format|
       if @cmdline.save
-        format.html { redirect_to(@cmdline, :notice => 'Cmdline was successfully created.') }
+        #format.html { redirect_to(@cmdline, :notice => 'Cmdline was successfully created.') }
+        format.html { render :xml => @cmdline, :status => :created, :location => @cmdline }
+        format.js { render :inline => resp }
         format.xml  { render :xml => @cmdline, :status => :created, :location => @cmdline }
       else
         format.html { render :action => "new" }
