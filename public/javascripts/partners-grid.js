@@ -12,8 +12,10 @@
 // This is used for showing the shadow effect on the newsblast window
 (function($) {
 	$.fn.boxShadow = function(xOffset, yOffset, blurRadius, shadowColor) {
-		if (!$.browser.msie) return;
-		return this.each(function(){
+                var ua = $.browser;
+		if (!ua.msie) return;
+		if (!ua.mozilla && ua.version.slice(0,1) == "9") return;
+                return this.each(function(){
 			$(this).css({
 				position:	"relative",
 				zoom: 		1,
@@ -88,10 +90,12 @@ $(window).load(
 		
 		// This is used for showing the shadow effect on the newsblast window
 		var ovvs = $('#news-blast').offset();
-		var xLeft = ovvs['left'] - 624;   // 559
-		var xTop = ovvs['top'] - 6;      // 148
+		var xLeft = ovvs['left'] - 0;   // 559
+		var xTop = ovvs['top'] - 608;      // 148
 		
-		//alert(xLeft);
+                //alert(ovvs['top']);
+                //xTop = -559;
+		//alert(xTop);
 		
 		$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
 		
