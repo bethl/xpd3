@@ -23,6 +23,11 @@ img {
     width: 1000px;
 }
 
+#section-head{
+	overflow:hidden;
+    position: relative;
+    z-index: 99999;    
+}
 
 #green-buffer{
 	background: #95AE3D;
@@ -91,7 +96,7 @@ ul.info {
 #content{
 	padding-left: 10px;
 	background:#fff;
-	width:700px;
+	width:770px; /*700px;*/
 	min-height:500px;
 	float:left;
 	font-size:14px;
@@ -120,10 +125,10 @@ ul.info {
 	margin-top:25px;
 	margin-right:7px;
 	padding-top: 0;
-        padding-right: 0;
-	box-shadow:		0 0 5px #000;
-	-o-box-shadow:		0 0 5px #000;
-	-moz-box-shadow:	0 0 5px #000;
+    padding-right: 0;
+	box-shadow:				0 0 5px #000;
+	-o-box-shadow:			0 0 5px #000;
+	-moz-box-shadow:		0 0 5px #000;
 	-webkit-box-shadow:	0 0 5px #000;
 }
 
