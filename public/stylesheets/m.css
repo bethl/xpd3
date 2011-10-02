@@ -5,6 +5,10 @@ body {
 	background: url("/images/bg.png") repeat-y scroll center top #0A0F19;
 }
 
+html {
+       overflow-y: scroll;
+}
+
 p {
 	margin:0;
 	padding:0;
@@ -87,18 +91,12 @@ img {
 	color:#fff;
 }
 
-#menu li a{
-	text-decoration: none;
-	color:#fff;
+#menu li.highlighted{
+	background-color:#9b9;
 }
 
-ul.info {
-	list-style:none outside none;
-	margin-left:100px;
-	padding-left: 1.5em;
-}
 
-ul.info {
+ul.infoz {
 	margin-left: 0;
 	font-size: 12px;
 	padding-left: 1.5em;
@@ -174,3 +172,109 @@ ul.info {
 #centered {
     text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/*  about us CSS */
+
+#about-div {
+	line-height:20px;
+	font-size: 14px;
+	font-weight:400;
+	font-family:sans-serif;
+	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #333;
+	letter-spacing: 0em;
+	
+}
+
+#about-div p {
+	margin: 1em 0;	
+	font-style: italic;
+}
+
+#about-div h1 {
+	padding-top: 1em;
+	font-weight: bold;
+	font-size: 16px;
+	color: #000;
+	font-style: normal;
+	
+}
+
+ul {
+    padding-left:2em;
+    margin-left:0;
+}
+
+
+
+/*  ERRORS/ 'flash' */
+
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+.error, .alert {
+    background: none repeat scroll 0 0 #333;
+    border-color: #333;
+    color: #8A1F11;
+}
+
+.error, .alert, .notice, .success, .info {
+    border: 2px solid #DDDDDD;
+    margin-bottom: 1em;
+    padding: 0.8em;
+}
+
+
