@@ -185,6 +185,8 @@
 }
 
 
+
+
 .submenu{
 	padding:0;
 	margin:0;
@@ -202,6 +204,10 @@
 	padding: 10px;
 	display: inline;
 	cursor:pointer;
+}
+
+.submenu li.hl-submenu{
+	text-decoration:underline;
 }
 
 #flt-walls li{

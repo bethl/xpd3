@@ -324,12 +324,12 @@ function changeParagraph(element)
 function fltByTag(tag){ // used in submenu to change tag to display
 	$('#submenus ul li').removeClass('hl-submenu');
 	$('ul.hl li').each(function(){
+		
+		$(this).removeClass('hl-submenu');  // remove highlighting from all of the submenu buttons... but...
+		
 		// check through until you find the one you just clicked and set it's class to hl
 		if ($(this).children().html()== tag)
-			{
-				$(this).addClass('hl-submenu');
-				return false;
-			}
+			$(this).addClass('hl-submenu');
 		
 	});
 	
@@ -365,6 +365,15 @@ function showSubmenu(submenu){ // get rid of old menu
 	$('#flt-' + submenu).addClass('hl');
 	// deal with main menu
 	$('#mnu-' + submenu).addClass('hl');  // deal with main menu
+	
+	// If the submenu contains only one child, go ahead and click that child for the user...
+	if ($('#flt-' + submenu).children().length == 1)
+	{
+		fltByTag(submenu);
+		
+		// manually change it to be highlighted submenu
+		$('#flt-' + submenu).children().addClass('hl-submenu')
+	}
 }
 
 
