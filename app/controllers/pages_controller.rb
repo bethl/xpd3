@@ -28,6 +28,9 @@ class PagesController < ApplicationController
   def news
   end
   
+  def directions
+  end
+  
   
   def manage
     @nb = NewsBlast.new if NewsBlast.count == 0

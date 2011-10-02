@@ -1,153 +1,176 @@
-<div id="page-wrap" > 
+<h1 id="headerQ">What are you shopping for today?</h1>
+
+<!-- SECTION WHERE YOU DEFINE THE MENU ITEMS FOR THE GRID -->
+<ul id="menu-filters">
+	<li id="mnu-flooring" class='hl'><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Flooring</a></li>
+    <span class=separater>|<span>
+
+
+	<li id="mnu-paint"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Paint</a></li>                            
+    <span class=separater>|<span>
+    
+    <li id="mnu-stain"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Stain</a></li>
+    <span class=separater>|<span>
+    
+	<li id="mnu-wallpaper"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Wallpaper</a></li>
+    <span class=separater>|<span>
+    
+	<li id="mnu-windows"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Window Treatments</a></li>
+    <span class=separater>|<span>
+    
+	<li id="mnu-upholstery"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Uphostery</a></li>
+    <span class=separater>|<span>
+    
+	<li id="mnu-cabinets"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Cabinets/Knobs</a></li>
+    <span class=separater>|<span>
+    
+	<li id="mnu-countertops"><a onclick="showSubmenu($(this).parent().attr('id').substring(4))">Countertops</a></li>
+</ul>
+
+<!-- SECTION WHERE YOU DEFINE THE SUB-MENU ITEMS -->
+
+<ul id="flt-flooring" class="submenu hl">
+	<li><a onclick="fltByTag($(this).html())">Carpet</a></li>
+	<li><a onclick="fltByTag($(this).html())">Wood</a></li>
+	<li><a onclick="fltByTag($(this).html())">Tile</a></li>
+	<li><a onclick="fltByTag($(this).html())">Luxury Vinyl</a></li>
+    <li><a onclick="fltByTag($(this).html())">Sheet Vinyl</a></li>
+    <li><a onclick="fltByTag($(this).html())">Linoleum</a></li>
+</ul>
+
+<ul id="flt-paint" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Paint</a></li>
+</ul>
+
+<ul id="flt-stain" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Stain</a></li>
+</ul>
+
+<ul id="flt-wallpaper" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Wallpaper</a></li>
+</ul>
+
+<ul id="flt-windows" class="submenu"> <!-- window treatements -->
+	<li><a  onclick="fltByTag($(this).html())">Window Treatments</a></li>
+</ul>
+
+<ul id="flt-upholstery" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Upholstery</a></li>
+</ul>
+
+<ul id="flt-cabinets" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Cabinets</a></li>
+	<li><a onclick="fltByTag($(this).html())">Knobs</a></li>
+</ul>
+
+
+<ul id="flt-countertops" class="submenu">
+	<li><a onclick="fltByTag($(this).html())">Cambria</a></li>
+	<li><a onclick="fltByTag($(this).html())">Zodiac</a></li>
+	<li><a onclick="fltByTag($(this).html())">Silstone</a></li>
+	<li><a onclick="fltByTag($(this).html())">Corian</a></li>
+	<li><a onclick="fltByTag($(this).html())">Marble</a></li>
+	<li><a onclick="fltByTag($(this).html())">Granite</a></li>
+	<li><a onclick="fltByTag($(this).html())">Soapstone</a></li>
+	<li><a onclick="fltByTag($(this).html())">Butcher Block</a></li>
+	<li><a onclick="fltByTag($(this).html())">Fromica</a></li>
+	<li><a onclick="fltByTag($(this).html())">Cement</a></li>
+</ul>
+
+
+
+
+<div id="right-wrap">
+	<div id="news-blast">
+		<div id="nb-title">
+			<p>
+			<b><i>NEWS BLAST</i></b>
+			</p>
+		</div>
+		<div id="nb-headline">Anniversary <br/>Celebration </br>Recap</div>
+		<div id="nb-date">
+			<i>- Aug 8 -</i>
+		</div>
+		<p>Thank you to everyone who attended.</p>
+		<br>
+		<p>Weren't those bagpipes fabulous!</p>
+		<br>
+		<p>Stay tuned for the raffle results.</p>
+	</div>
+</div>
+
+
+<div id="partners-grid">
 	
-	<!-- MAIN ROW -->
-	<div id="main-content">
-		
-		<!-- partners -->
-		<div id="partners-wrap" style="margin:0;float:left;width:281px;">        <!--  this partners-wrap div can be posissioned very precisely, all as one thing!  -->
-			<%= render 'controls/partners_slideup' %>
-			
-			<div id="partners-filter" >
-				<span id="disphead" style="color:#ffccff;"><b>
-					What do you want to shop for today?
-				</b></span>
-				<br>
-				<ul id="pFiltersList">
-					<li>Paint</li>
-					<li>Tile</li>  
-					<li>Window Treatments</li>
-					<li>Counter Tops</li>
-					<li>Carpet</li>
-					<li>Wood Floor</li>
-				</ul>
+	<a onclick="gcScrollUp()">
+		<div id="scroll-up" class="triangle triangleU"></div>
+	</a>
+	<div id="spacer"></div>
+	
+	<div id="inner-members">
+		<!-- col 1 -->
+		<div id="gc1" class="grid-col">           <!-- the template for these is that you need a mother div for the background color, an inner div for the image and click event-->
+			                                      <!-- jQuery provides them with the click functionality.  Search for $(#ben) to find where.-->
+            
+			<div id="iScroll">
+				<div class="gs"><div id="ben" class="partner-grid" tag="paint"></div></div>
+                <div class="gs"><div id="fin" class="partner-grid" tag="paint"></div></div>
+				<div class="gs"><div id="cabot" class="partner-grid" tag="stain"></div></div>
+				<div class="gs"><div id="pratt" class="partner-grid" tag="paint"></div></div>
+				<div class="gs"><div id="zar" class="partner-grid" tag="stain"></div></div>
+				<div class="gs"><div id="gra" class="partner-grid" tag="paint"></div></div>
+				<div class="gs"><div id="old" class="partner-grid" tag="paint"></div></div>
+				<div class="gs"><div id="pen" class="partner-grid" tag="paint"></div></div>
 			</div>
 		</div>
 		
-		
-		<script>
-			var antiFilter = new Array(); // this array keeps track of what tags are currently being filtered
-			
-			function include(arr, obj)
-			{
-				return (indexOfM(arr, obj) != -1);
-			}
-			
-			function indexOfM(arr, str)
-			{
-				for(var i=0; i<arr.length; i++){
-					if(arr[i]==str){
-						return i;
-					}
-				}
-				return -1;
-			}
-
-			//antiFilter.push("ha");
-			//antiFilter.splice(0,1);
-			//alert(include(antiFilter,"ha"));
-			//alert(antiFilter.indexOf("ha"));
-			//alert(indexOfM(antiFilter, "ha"));
-			//alert(antiFilter.length);
-			
-			
-		    $("#pFiltersList li").click(function () { 
-	    	  var tehTag = $(this).html().toLowerCase();
-	    	  
-	    	  
-		      var filterStrA = 'a[tag="'+ tehTag + '"]';                  // for good browsers
-		      var filterStrB = 'div[tag="' + jQuery.trim(tehTag) + '"]';  // for suck browsers
-		      	
-		      if ($(this).hasClass("hili"))         // DISABLE FILTER
-		      {
-		      	$(this).removeClass("hili");
-		      	
-		      	antiFilter.splice(indexOfM(antiFilter, tehTag),1);
-		      	
-		      	$(filterStrA).parent().hide();
-		      	$(filterStrB).hide();
-		      	
-		      	if (antiFilter.length == 0)
-		      	{
-		      		$(".slide-up-boxes a").show();
-		      		$(".pbox").show();
-		      	}
-		      }
-		      else                                  // ENABLE FILTER
-		      {
-		      	$(this).addClass("hili");
-		      	
-		      	// For the first time, if the antiFilter list is empty, that means we're going to hide every element before showing the one desired...
-		      	if (antiFilter.length == 0)	{
-		      		$(".pbox").hide();  // both!
-		      	}
-		      	
-		      	if (!include(antiFilter,tehTag))   // if the antiFilter doesn't have the tag, then add it, otherwise, it's weird that it already had the tag... do nothing (prevent duplications...)
-		      	{
-		      		antiFilter.push(tehTag);
-		      	}
-		      	
-		      	
-		      	$(filterStrA).parent().show();
-		      	$(filterStrB).show();
-
-		      	
-		      }
-		    });
-		</script>
-
-		
-			
-		
-		
-		<!-- right wrap -->
-		<div id="right-wrap">
-			<%= render 'pages/news_blasts' %>
-		</div>
-
-		
-		<!-- MAIN CENTERPIECE -->
-		<div id="center-wrap">
-			
-			<div id="flashbox">
-				
-				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="560" height="350" id="FlashID" title="Excelsior Carpet One"> 
-			      <param name="movie" value="/preview.swf" /> 
-			      <param name="quality" value="high" /> 
-			      <param name="wmode" value="opaque" /> 
-			      <param name="swfversion" value="9.0.45.0" /> 
-			      <!-- This param tag prompts users with Flash Player 6.0 r65 and higher to download the latest version of Flash Player. Delete it if you don’t want users to see the prompt. --> 
-			      <param name="expressinstall" value="Scripts/expressInstall.swf" /> 
-			      <!-- Next object tag is for non-IE browsers. So hide it from IE using IECC. --> 
-			      <!--[if !IE]>--> 
-			      <object type="application/x-shockwave-flash" data="/preview.swf" width="560" height="350"> 
-			        <!--<![endif]--> 
-			        <param name="quality" value="high" /> 
-			        <param name="wmode" value="opaque" /> 
-			        <param name="swfversion" value="9.0.45.0" /> 
-			        <param name="expressinstall" value="/Scripts/expressInstall.swf" /> 
-			        <!-- The browser displays the following alternative content for users with Flash Player 6.0 and older. --> 
-			        <div> 
-			          <h4>Content on this page requires a newer version of Adobe Flash Player.</h4> 
-			          <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" width="112" height="33" /></a></p> 
-			        </div> 
-			        <!--[if !IE]>--> 
-			      </object> 
-			      <!--<![endif]--> 
-			    </object> 
-			</div>
-			
-			<!--
-			<script type="text/javascript"> 
-				<!--
-				swfobject.registerObject("FlashID");
-				//-->
-			</script> 
-			
-			<div id="lovely-description" class="containter">
-				<p>Excelsior Paint & Design Center, a family company, is the <span id="boldinate">local choice</span> for paint and design solutions.  We make solving your design problems our duty and always earn the satisfaction of our customers.  <span id="boldinate">Stop in today,</span> and speak with one of our many <span id="boldinate">design experts!</span></p>
-			</div>
+		<!-- col 2 -->
+		<div id="gc2" class="grid-col">
+			<div class="gs"><div id="kra" class="partner-grid" tag="fabric"></div></div>
+			<div class="gs"><div id="hun" class="partner-grid" tag="window-treatments"></div></div>
+			<div class="gs"><div id="top" class="partner-grid" tag="cabinets"></div></div>
+			<div class="gs"><div id="zar" class="partner-grid" tag="stain"></div></div>
 		</div>
 		
+		<!-- col 3 -->
+		<div id="gc3" class="grid-col">
+			<div class="gs"><div id="kara" class="partner-grid" tag="carpet"></div></div>
+			<div class="gs"><div id="sha" class="partner-grid" tag="carpet"></div></div>
+			<div class="gs"><div id="old" class="partner-grid" tag="stain"></div></div>
+			<div class="gs"><div id="col" class="partner-grid" tag="cabinets"></div></div>
+		</div>
+		
+		<!-- col 4 -->
+		<div id="gc4" class="grid-col">
+			<div class="gs"><div id="red" class="partner-grid" tag="cabinets"></div></div>
+			<div class="gs"><div id="kas" class="partner-grid" tag="fabric"></div></div>
+			<div class="gs"><div id="fin" class="partner-grid" tag="paint"></div></div>
+			<div class="gs"><div id="eme" class="partner-grid" tag="cabinets"></div></div>
+		</div>
+		
+		<!-- col 5 -->
+		<div id="gc5" class="grid-col">
+			<div class="gs"><div id="max" class="partner-grid" tag="fabric"></div> </div>
+			<div class="gs"><div id="rob" class="partner-grid" tag="fabric"></div></div>
+			<div class="gs"><div id="tuf" class="partner-grid"></div></div>
+			<div class="gs"><div id="old" class="partner-grid" tag="stain"></div></div>
+		</div>
+			
+		<img id="first-lp" class="lovely-picture current-lp" src='images/rails.png'>
+		
+		<div id="lovely-description">
+			<p></p>
+		</div>
+	
+	</div>
+	
+	
+
+	<div class="buttonBinder">
+		<a onclick="gcScrollDown()" style="width:100px;">
+			<div id="scroll-down" class="triangle triangleD"></div>
+		</a>
 	</div>
 
 </div>
+

@@ -1,20 +1,39 @@
-<!-- Navigation ROW -->
-<nav>
-	<div id="navChunk">
-		<hr /> 
-		<ul id="menu" style="padding-top:16px; padding-bottom:16px;">
-			<li class="<%= "highlighted" if params[:action] == "home" %>"> <a href='/'>HOME </a></li>
-			<li><span class="doubleColon">: :  </span></li>
-			<li class="<%= "highlighted" if params[:action] == "about" %>"><a href="/pages/about">ABOUT US</a></li>
-			<li><span class="doubleColon">: : </span> </li>
-			<li class="<%= "highlighted" if params[:action] == "gallery" %>"><a href="/pages/gallery">GALLERY</a> </li>
-			<li><span class="doubleColon">: : </span></li>
-			<li class="<%= "highlighted" if params[:action] == "specials" %>"><a href="/pages/specials">SPECIALS</a></li>
-			<li><span class="doubleColon"> : : </span></li>
-			<li class="<%= "highlighted" if params[:action] == "products" %>"><a href="/pages/products" title="Products and Services" target="_self">PRODUCTS</a></li>
-			<li><span class="doubleColon"> : : </span></li>
-			<li class="<%= "highlighted" if params[:action] == "news" %>"><a href="/pages/news">NEWS</a></li>
-		</ul>
-		<hr /> 
+<div id="nav-side">
+	
+	<div>
+		<a href="#">
+			<img id="brand" src="/images/epdMainLgo.png"/>
+		</a>
 	</div>
-</nav>
+	
+	<div id="teal"></div>
+	<div id="black-brand-img"></div>
+
+	<ul id="menu">
+		<li class="<%= "highlighted" if params[:action] == "home" %>"> <a href='/'> Home </a></li>
+		<li class="<%= "highlighted" if params[:action] == "about" %>"><a href="/about">About Us</a></li>
+		<li class="<%= "highlighted" if params[:action] == "gallery" %>"><a href="/gallery">Gallery</a></li>
+		<li class="<%= "highlighted" if params[:action] == "specials" %>"><a href="/specials">Specials</a></li>
+		<li class="<%= "highlighted" if params[:action] == "products" %>"><a href="/products" title="Products and Services" target="_self">Products</a></li>
+		<li class="<%= "highlighted" if params[:action] == "news" %>"><a href="/news">News</a></li>
+		<li class="<%= "highlighted" if params[:action] == "directions" %>"><a href="/directions">Directions</a></li>
+	</ul>
+	
+
+	<div id="directions">
+		<ul class="info">
+			<li>701 Highway 7</li>
+			<li>Excelsior MN 55331</li>
+	    	<li>phone: 952.474.0162</li>
+			<li>fax: 952.474.0162</li>
+		</ul>
+	</div>
+
+
+	<div id="hours">
+		<ul class="info">
+			<li><b>Hours:</b> M-F 7:30-6:30;</li>
+			<li>SAT 9-5; SUN 11-4</li>
+		</ul>
+	</div>
+</div> <!-- /nav-side -->

@@ -1,5 +1,7 @@
 Xpd3::Application.routes.draw do
   
+  get "pages/directions"
+
   resources :cmdlines
 
   resources :users do
@@ -19,30 +21,12 @@ Xpd3::Application.routes.draw do
   
   get "pages/manage"
   
-  get "pages/home"
-
-  get "pages/about"
-
-  get "pages/gallery"
-
-  get "pages/specials"
-
-  get "pages/products"
-
-  get "pages/news"
-
-  get "page/home"
-
-  get "page/about"
-
-
-  get "page/gallery"
-
-  get "page/specials"
-
-  get "page/products"
-
-  get "page/news"
+  match '/about', :to => 'pages#about'
+  match '/gallery', :to => 'pages#gallery'
+  match '/specials', :to => 'pages#specials'
+  match '/products', :to => 'pages#products'
+  match '/news', :to => 'pages#news'
+  match '/directions', :to => 'pages#directions'
   
   match "/brendan", :to => 'pages#brendan'
   
