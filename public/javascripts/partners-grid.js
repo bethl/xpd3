@@ -62,11 +62,11 @@
 
 
 
-
-
+// Global Variables!!!
 
 var toggleChip = true;     // determines whether the imige-l appears from left of right
 var isScrolling = false;
+var contentXML = new Array();       // this is for stupid ie because it can't just read the content out of the xml file...
 
 $(window).load(
 	function() {
@@ -100,6 +100,7 @@ $(window).load(
 		$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
 		
 		//alert(ovvs['top']);   // var xLeft = ovvs['left'] - 634
+		
 		
 		
 		
@@ -320,6 +321,20 @@ function changeParagraph(element)
 	//alert(content.length);
 	if(typeof content == 'undefined'){
    		content = "none";  // ie...
+   		
+   		// Do ajax and check if it's in the xml file
+   		// There is a known bug in this, and that is that the first item you click, it will not have the content downloaded and ready yet.
+   		// I find this to be a feature in that the the span text is somewhat important.  
+   		
+   		
+   		if (contentXML == "")
+   			doAjaxRead();
+   		
+   		thisId = element.attr('id');
+   		
+   		if (typeof contentXML[thisId] != "undefined")
+   			content = contentXML[thisId];   		
+   		
  	};
  	if(content == ''){ // safari
  		content = "none";
@@ -335,7 +350,27 @@ function changeParagraph(element)
 }
 
 
-
+function doAjaxRead()
+{
+	$.ajax({
+		type: "GET",
+		url: "/data/contents.xml",
+		dataType: "xml",
+		success: function(xml) {
+			$(xml).find('content').each(function(){
+				var id = $(this).attr('id');
+				var string = $(this).find('string').text();
+				
+				//alert(string);
+				//contentXML.push([id, string]);
+				contentXML[id] = string;
+				
+				//$('<div class="items" id="link_'+id+'"></div>').html('<a href="'+url+'">'+title+'</a>').appendTo('#page-wrap');
+				
+			});
+		}
+	});
+}
 
 
 
