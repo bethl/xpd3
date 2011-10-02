@@ -150,11 +150,7 @@
 	padding-bottom: 0;
 	padding-top: 6px;
 }
-td {
-	background: #f1f2ee;
-	width: 85px;
-	height: 85px;
-}
+
 .hilite {
 	border-color: transparent transparent #ffffee transparent;
 }
