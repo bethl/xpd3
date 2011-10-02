@@ -171,15 +171,19 @@ var enColor = '#F1F2EE';  //???
 
 function disableTop(){
 	$('#scroll-up').css('border-color', ' transparent transparent ' + disColor);
+	$('#scroll-up').css('cursor', 'default');
 }
 function enableTop(){
 	$('#scroll-up').css('border-color', ' transparent transparent ' + enColor);
+	$('#scroll-up').css('cursor', 'hand');
 }
 function disableBottom(){
 	$('#scroll-down').css('border-color', disColor + ' transparent transparent');
+	$('#scroll-down').css('cursor', 'default');
 }
 function enableBottom(){
 	$('#scroll-down').css('border-color', enColor + ' transparent transparent');
+	$('#scroll-down').css('cursor', 'hand');
 }
 
 function checkDisabledScrollButtons(){
@@ -230,6 +234,10 @@ function gcScrollDown(){
 	
 	var currentOffset = parseInt(ele.css('top').replace("px", ""));
 	
+	
+	//alert("Limit: " + limit);             // 300
+	//alert("CurrentOffset: " + currentOffset); // -
+	
 	if (-currentOffset<limit)
 	{
 		isScrolling = true;
@@ -237,8 +245,10 @@ function gcScrollDown(){
 			isScrolling = false;
 		});
 		enableTop();
-		if (-(currentOffset+elementSpace) < limit)
+		if (-(currentOffset - elementSpace) >= limit)        // when 
+		{
 			disableBottom(); // set this buttons color to disabled
+		}
 	}
 }
 
@@ -256,15 +266,16 @@ function changeDisplayed(element) {  // changes the displayed content, including
 	var id = element.attr('id');
 	
 	var imgpath = "/images/partners-grid/" + id + "-l.jpg";    // the naming convention must be perfect on your images!!
-	var imgMarkup = "<img id='" + id + "' " + "class='lovely-picture next-lp' src='" + imgpath + "' style='display: none;background:#ffffff'/>";
+	var imgMarkup = "<img id='" + id + "-l' " + "class='lovely-picture next-lp' src='" + imgpath + "' style='display: none;background:#ffffff'/>";
 	
+	var thisImgID = 'img#'+id+'-l';
 	
-	if ($('img#'+id).length > 0) // if the image has already been made... 
-		$('img#'+id).remove();  //  delete it!  We'll make it again.  It will still be cached! 
+	if ($(thisImgID).length > 0) // if the image has already been made... 
+		$(thisImgID).remove();  //  delete it!  We'll make it again.  It will still be cached! 
 	
 	if (toggleChip)             // this convention causes a beautiful back and forth effect when loading the images
 	{
-		$(".current-lp").after(imgMarkup);   // create a new image with the proper source
+		$(".current-lp").after(imgMarkup);   // create a new image with the proper source... the name .current-lp is confusing, it should be anchor-lp, and it's always invisible... so just anchor
 		toggleChip = false;
 	}
 	else
@@ -276,7 +287,7 @@ function changeDisplayed(element) {  // changes the displayed content, including
 	changeSelectedButton(element);
 	
 	
-	// Hide the text, then hid picture on callback.....................
+	// Hide the text, then hide picture on callback.....................
 	$("#lovely-description").fadeOut('100');
 	$('.lovely-picture').hide('slow');   // on callback, show the next-lp
 	

@@ -217,6 +217,7 @@
 #partners-grid{
 	overflow:hidden;
 	padding-bottom:20px;
+	padding-top:6px;
 }
 
 td{
@@ -258,11 +259,6 @@ clear:both;
 
 #spacer{
 	height:10px;
-}
-
-
-#scroll-down{
-	content: "hi";
 }
 
 
