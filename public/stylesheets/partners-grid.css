@@ -1,79 +1,55 @@
 /*  <!--flooring - carpets --> */
 
-#kara{
+#kara {
 	background: #f1f2ee url('/images/partners-grid/kara-s.png');
 }
-
-#sha{
+#sha {
 	background: #f1f2ee url('/images/partners-grid/sha-s.png');
 }
-
-#tuf{
+#tuf {
 	background: #f1f2ee url('/images/partners-grid/tuf-s.png');
 }
-
 /*   <!-- flooring - wood -->*/
 
-#mag{
+#mag {
 	background: #f1f2ee url('/images/partners-grid/mag-s.png');
 }
-
-
 /*   <!-- flooring - vinyl -->*/
 
 /*   <!-- flooring tile -->*/
 
-
-
-
 /*   <!-- paints/stains -->*/
 
-#cabot{
+#cabot {
 	background: #f1f2ee url('/images/partners-grid/cabot-s.png');
 	content: "With Cabot Stain wood care products your floors will be durable and beautiful.";
 }
-
-
-#ben{
+#ben {
 	background: #f1f2ee url('/images/partners-grid/ben-s.png');
 	content: "Benjamin Moore paints keep this dining room feeling cozy with a deep shade of red (2083-10).";
 }
-
-#fin{
+#fin {
 	background: #f1f2ee url('/images/partners-grid/fin-s.png');
 	content: "This vintage bench was painted with Van Gogh (2070) from the Fine Paints of Europe Classic Collection.";
 }
-
-
-#gra{
+#gra {
 	background: #f1f2ee url('/images/partners-grid/gra-s.png');
 	content: "Graham paint sets off the white cabinetry in this kitchen.";
-
 }
-
-#old{
+#old {
 	background: #f1f2ee url('/images/partners-grid/old-s.png');
 	content: "An Old Master stain and finish enhances the natural beauty of the wood.";
-
 }
-
-
-#pratt{
+#pratt {
 	background: #f1f2ee url('/images/partners-grid/Pratt-s.png');
 	content: "Pratt & Lambert paint showcases the detailed woodwork.";
-
 }
-
-
-
-#tuf{
+#tuf {
 	background: #f1f2ee url('/images/partners-grid/tuf-s.png');
 }
-
-#zar{
+#zar {
 	background: #f1f2ee url('/images/partners-grid/zar-s.png');
 	content: "ZAR offers  wood finishes, interior and exterior stains.";
-
 }
 /*   <!-- faux finishes -->*/
 
@@ -81,286 +57,221 @@
 
 /*   <!-- window treatments - hunterdouglas -->*/
 
-
-#hun{
+#hun {
 	background: #f1f2ee url('/images/partners-grid/hun-s.png');
 }
-
-
-
 /*   <!-- window treatments - fabric -->*/
 
 /*   <!-- fabric upholstery -->*/
 
-#stro{
+#stro {
 	background: #f1f2ee url('/images/partners-grid/stro-s.png');
 }
-
-#rob{
+#rob {
 	background: #f1f2ee url('/images/partners-grid/rob-s.png');
 }
-
-#max{
+#max {
 	background: #f1f2ee url('/images/partners-grid/max-s.png');
 }
-
-#kra{
+#kra {
 	background: #f1f2ee url('/images/partners-grid/kra-s.png');
 }
-
-#kas{
+#kas {
 	background: #f1f2ee url('/images/partners-grid/kas-s.png');
 }
-
-
 /*   <!-- cabinets knobs -->*/
 
-
-
-#red{
+#red {
 	background: #f1f2ee url('/images/partners-grid/red-s.png');
 }
-
-#eme{
+#eme {
 	background: #f1f2ee url('/images/partners-grid/eme-s.png');
 }
-
-#top{
+#top {
 	background: #f1f2ee url('/images/partners-grid/top-s.png');
 }
-
-#col{
+#col {
 	background: #f1f2ee url('/images/partners-grid/col-s.png');
 }
-
-
-
-
-
-
-
-
-
-
 /* End of Grid Item IDs */
-
-
-
-
-
 
 #headerQ {
 	margin: 19px 0;
 	padding-left: 5px;
 }
-
-#menu-filters{
+#menu-filters {
 	padding-left: 0px;
 	margin-left: 0px;
 	list-style: none outside none;
-	line-height:18px;
-
+	line-height: 18px;
 }
-#menu-filters li{
+#menu-filters li {
 	font-size: 14px;
 	letter-spacing: 0.04em;
 	padding: 5px;
 	display: inline;
 	color: #000000;
 }
-
-#menu-filters li.hl{
-	text-decoration:underline;
+#menu-filters li.hl {
+	text-decoration: underline;
 }
-
-#menu-filters li a{
+#menu-filters li a {
 	text-decoration: none;
-	color:#000000;
-	cursor:pointer;
+	color: #000000;
+	cursor: pointer;
 }
-
-
-
-.separater{color: #95AE3D;
+.separater {
+	color: #95AE3D;
 }
-
-
-
-
-.submenu{
-	padding:0;
-	margin:0;
+.submenu {
+	padding: 0;
+	margin: 0;
 	padding-left: 0px;
 	list-style: none outside none;
-	display:none;
+	display: none;
 }
-
-.submenu.hl{
-	display:inline;
+.submenu.hl {
+	display: inline;
 }
-
-.submenu li{
+.submenu li {
 	letter-spacing: 0.04em;
 	padding: 10px;
 	display: inline;
-	cursor:pointer;
+	cursor: pointer;
 }
-
-.submenu li.hl-submenu{
-	text-decoration:underline;
+.submenu li.hl-submenu {
+	text-decoration: underline;
 }
-
-#flt-walls li{
-	display:inline;
+#flt-walls li {
+	display: inline;
 }
-
-#partners-grid{
-	overflow:hidden;
-	padding-bottom:20px;
-	padding-top:6px;
+#partners-grid {
+	overflow: hidden;
+	padding-bottom: 20px;
+	padding-top: 6px;
 }
-
-td{
+td {
 	background: #f1f2ee;
 	width: 85px;
 	height: 85px;
 }
-
-.hilite{
+.hilite {
 	border-color: transparent transparent #ffffee transparent;
 }
-
-.triangle{
-border-style: solid;
-height: 0px;
-width: 0px;
-position:relative;
-left: 16px;
-cursor: hand;
-z-index:1;
-
-opacity:0;
-filter: alpha(opacity=0);
--ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+.triangle {
+	border-style: solid;
+	height: 0px;
+	width: 0px;
+	position: relative;
+	left: 16px;
+	cursor: hand;
+	z-index: 1;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
-
 .triangleU {
-border-color: transparent transparent #f1f2ee transparent;
-border-width: 0px 42px 10px 42px;
-margin-bottom:-2px;
+	border-color: transparent transparent #f1f2ee transparent;
+	border-width: 0px 42px 10px 42px;
+	margin-bottom: -2px;
 }
-
 .triangleD {
-border-color: #f1f2ee transparent transparent  transparent;
-border-width: 10px 42px 0px 42px;
-clear:both;
+	border-color: #f1f2ee transparent transparent transparent;
+	border-width: 10px 42px 0px 42px;
+	clear: both;
 }
-
-
-#spacer{
-	height:10px;
+#spacer {
+	height: 10px;
 }
-
-
-.buttonBinder{
-	width:100px;
+.buttonBinder {
+	width: 100px;
 	height: 23px;
-	
-	overflow:hidden;
-	clear:both;
-	float:left;
+	overflow: hidden;
+	clear: both;
+	float: left;
 }
-
-.partner-grid{
-	position:relative;
-	left:0px;
-	top:0px;
-	background-color:#f1f2ee;
-	width:85px;
-	height:85px;
+.partner-grid {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-color: #f1f2ee;
+	width: 85px;
+	height: 85px;
 	/* margin: 15px 0 0 15px; */
-	opacity:.7;
+	opacity: .7;
 	filter: alpha(opacity=70);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
-	background-image:url('/images/partners-grid/paintLgos/PrattLambert.png');
-	border:solid 1px black;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	background-image: url('/images/partners-grid/paintLgos/PrattLambert.png');
+	border: solid 1px black;
 }
-
-.gs{
-	position:relative;
-	left:0px;
-	top:0px;
-	background-color:#f1f2ee;
-	width:85px;
-	height:85px;
+.gs {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	background-color: #f1f2ee;
+	width: 85px;
+	height: 85px;
 	margin: 0px 0 15px 15px;
-	opacity:.7;
+	opacity: .7;
 }
-
-.partner-grid:hover{
-	opacity:1;
+.partner-grid:hover {
+	opacity: 1;
 	filter: alpha(opacity=100);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
-
-.grid-col{
-	float:left;
+.grid-col {
+	float: left;
 }
-
-.highlightit img{
-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
--moz-opacity: 0.5;
-opacity: 0.5;
+.highlightit img {
+	filter: progid
+	: DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
 }
-
-.highlightit:hover img{
-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
--moz-opacity: 1;
-opacity: 1;
+.highlightit:hover img {
+	filter: progid
+	: DXImageTransform.Microsoft.Alpha(opacity=100);
+	-moz-opacity: 1;
+	opacity: 1;
 }
-
-.lovely-picture{
-	display:none;
-	position:relative;
-	top:15px; 
-	left:15px; 
-	height:285px; 
-	width:475px; /*370 */
+.lovely-picture {
+	display: none;
+	position: relative;
+	top: 15px;
+	left: 15px;
+	height: 285px;
+	width: 475px; /*370 */
 }
-
-#lovely-description{
-	display:none;
-	margin-top:14px;
-	margin-left:115px;
+#lovely-description {
+	display: none;
+	margin-top: 14px;
+	margin-left: 115px;
 }
-
-#inner-members{
-	width:605px; /* 502 */
+#inner-members {
+	width: 605px; /* 502 */
 }
 #inner-members img {
-	top:0;
+	top: 0;
+}
+#gc1 {
+	overflow: hidden;
+	width: 102px;
+	height: 400px;
+	position: relative;
 }
 
-#gc1{
-	overflow:hidden;
-	width:102px;
-	height:400px;
-	position:relative;
+#iScroll {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	padding: 0;
+	margin: 0;
 }
-
-#iScroll{
-	position:absolute;
-	top:0px;
-	left:0px;
-	padding:0;
-	margin:0;
-}
-
-.hilite{
-	opacity:1;
+.hilite {
+	opacity: 1;
 	filter: alpha(opacity=100);
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	/* change color to darker? */
-	border-color:#C73B1B;
+	border-color: #C73B1B;
 }
 

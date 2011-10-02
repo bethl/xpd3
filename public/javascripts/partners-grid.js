@@ -100,6 +100,9 @@ $(window).load(
 		$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
 		
 		//alert(ovvs['top']);   // var xLeft = ovvs['left'] - 634
+		
+		
+		
 });
 
 
@@ -194,8 +197,16 @@ function checkDisabledScrollButtons(){
 	if (childs > 4)
 	{
 		$(".triangle").animate({opacity: 1.0}, 'slow' );
+		
+		var currentOffset = parseInt($('#iScroll').css('top').replace("px", ""));
+
 		disableTop();
+		
+		if (currentOffset != 0)  // reset the position of the scroll bar incase it was scrolled downwards...
+			$('#iScroll').css('top', 0);
+		
 	}
+	
 	else
 	{// if number of elements is less than 5, opacitize down and up since you won't need them
 		$(".triangle").animate({opacity: 0.0}, 'slow' );
