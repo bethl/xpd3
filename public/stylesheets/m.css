@@ -14,6 +14,9 @@ p {
 	padding:0;
 }
 
+html {
+	overflow-y: scroll;
+}
 img {
     border-style: none
 }
@@ -173,6 +176,7 @@ ul.infoz {
     text-align: center;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -278,3 +282,9 @@ ul {
 }
 
 
+=======
+#about-div p{
+	padding: 10px;
+	margin: 10px;
+}
+>>>>>>> 20be5993fdb3e0ff1542d8e02675a8d59f8f005b
