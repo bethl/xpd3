@@ -10,6 +10,9 @@ p {
 	padding:0;
 }
 
+html {
+	overflow-y: scroll;
+}
 img {
     border-style: none
 }
@@ -173,4 +176,9 @@ ul.info {
 }
 #centered {
     text-align: center;
+}
+
+#about-div p{
+	padding: 10px;
+	margin: 10px;
 }

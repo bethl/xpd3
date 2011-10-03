@@ -6,6 +6,7 @@ class NewsBlastsController < ApplicationController
   def index
     @news_blasts = NewsBlast.all
 
+     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @news_blasts }
