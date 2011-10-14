@@ -1,5 +1,7 @@
 Xpd3::Application.routes.draw do
   
+  resources :ipfixes
+
   get "pages/directions"
 
   resources :cmdlines

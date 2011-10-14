@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Host:</b>
+  <%= @ipfix.host %>
+</p>
+
+<p>
+  <b>Ip:</b>
+  <%= @ipfix.ip %>
+</p>
+
+
+<%= link_to 'Edit', edit_ipfix_path(@ipfix) %> |
+<%= link_to 'Back', ipfixes_path %>

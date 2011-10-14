@@ -1,0 +1,25 @@
+<h1>Listing ipfixes</h1>
+
+<table>
+  <tr>
+    <th>Host</th>
+    <th>Ip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ipfixes.each do |ipfix| %>
+  <tr>
+    <td><%= ipfix.host %></td>
+    <td><%= ipfix.ip %></td>
+    <td><%= link_to 'Show', ipfix %></td>
+    <td><%= link_to 'Edit', edit_ipfix_path(ipfix) %></td>
+    <td><%= link_to 'Destroy', ipfix, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ipfix', new_ipfix_path %>
