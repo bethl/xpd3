@@ -73,7 +73,7 @@ img {
 
 #nav-side{
 	float:left;
-	letter-spacing:0.1em;
+	letter-spacing:0.05em;
 	font-size: 14px;
 	width:180px;
 	background: #95AE3D;
@@ -137,7 +137,7 @@ ul.infoz {
 
 #right-wrap {
 	float:right;
-	width:150px;
+	width:160px;
 	margin-top:25px;
 	margin-right:7px;
 	padding-top: 0;
