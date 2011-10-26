@@ -97,7 +97,7 @@ $(window).load(
                 //xTop = -559;
 		//alert(xTop);
 		
-		$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
+		//$('#right-wrap').boxShadow( xLeft, xTop, '10', "#000" );
 		
 		//alert(ovvs['top']);   // var xLeft = ovvs['left'] - 634
 		
