@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111013091658) do
+ActiveRecord::Schema.define(:version => 20111027032939) do
 
   create_table "addresses", :force => true do |t|
     t.string   "state"
@@ -75,6 +75,16 @@ ActiveRecord::Schema.define(:version => 20111013091658) do
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "suppliers", :force => true do |t|
+    t.string   "company_name"
+    t.string   "website"
+    t.string   "account"
+    t.string   "username"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
