@@ -7,7 +7,12 @@ class SessionsController < ApplicationController
   end
 
   def create                                         # we get here by clicking the submit button on the sessions/new.html.erb form
-    user = User.authenticate(params[:session][:email],  
+    email = params[:session][:email]
+    unless email.include?('@') 
+	email += "@excelsiorcarpetone.com"
+    end
+
+    user = User.authenticate(email,  
                              params[:session][:password])
     if user.nil?
       flash.now[:error] = "Invalid email/password combination."
