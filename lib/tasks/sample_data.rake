@@ -14,13 +14,7 @@ def make_users
                        :password => "111111",
                        :password_confirmation => "111111")
   admin.toggle!(:admin)
-  
   admin.persons.create(:first_name => "Carolyn", :last_name => "Manhatton", :email => admin.email)
-  
-  
-  
-
-  
   
   
   
@@ -31,8 +25,6 @@ def make_users
     User.create!(:email => email,
                  :password => password,
                  :password_confirmation => password).persons.create(:first_name => name, :last_name => name, :email => email)
-   
-    
   end
 end
 
