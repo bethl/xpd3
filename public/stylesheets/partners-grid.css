@@ -2,6 +2,8 @@
 
 #kara {
 	background: #f1f2ee url('/images/partners-grid/kara-s.png');
+	content: "A beautifully woven carpet from pure New Zealand wool in maraschino red increases drama in this family room.";
+
 }
 #sha {
 	background: #f1f2ee url('/images/partners-grid/sha-s.png');
@@ -28,6 +30,12 @@
 	background: #f1f2ee url('/images/partners-grid/ben-s.png');
 	content: "Benjamin Moore paints keep this dining room feeling cozy with a deep shade of red (2083-10).";
 }
+
+#cam {
+	background: #f1f2ee url('/images/partners-grid/cam-s.png');
+	content: "High performance surfaces by Cambria keep the look fresh and the care easy.";
+}
+
 #fin {
 	background: #f1f2ee url('/images/partners-grid/fin-s.png');
 	content: "This vintage bench was painted with Van Gogh (2070) from the Fine Paints of Europe Classic Collection.";
@@ -38,12 +46,25 @@
 }
 #old {
 	background: #f1f2ee url('/images/partners-grid/old-s.png');
-	content: "An Old Master stain and finish enhances the natural beauty of the wood.";
+	content: "Old Masters is a family owned business that has offered stains and finishes since 1953.";
 }
+
+#pen {
+	background: #f1f2ee url('/images/partners-grid/pen-s.png');
+	content: "Penofin Knotwood is an example of the many stains, finishes and sealers offered by Penofin";
+}
+
 #pratt {
-	background: #f1f2ee url('/images/partners-grid/Pratt-s.png');
+	background: #f1f2ee url('/images/partners-grid/pratt-s.png');
 	content: "Pratt & Lambert paint showcases the detailed woodwork.";
 }
+
+
+#sil {
+	background: #f1f2ee url('/images/partners-grid/sil-s.png');
+	content: "Silestone White Zeus Extreme is the whitest quartz on the countertop market today. It delivers the superior bacteriostatic and scratch resistance performance.";
+}
+
 #tuf {
 	background: #f1f2ee url('/images/partners-grid/tuf-s.png');
 }
@@ -59,6 +80,7 @@
 
 #hun {
 	background: #f1f2ee url('/images/partners-grid/hun-s.png');
+		content: "Hunter Douglas has many window covering options.";
 }
 /*   <!-- window treatments - fabric -->*/
 
@@ -75,6 +97,7 @@
 }
 #kra {
 	background: #f1f2ee url('/images/partners-grid/kra-s.png');
+	content: "Kravet offers possibilites that work perfectly with your lifestyle and interior.";
 }
 #kas {
 	background: #f1f2ee url('/images/partners-grid/kas-s.png');
@@ -89,9 +112,12 @@
 }
 #top {
 	background: #f1f2ee url('/images/partners-grid/top-s.png');
+	content: "Crystal knobs are a popular choice.";
+
 }
 #col {
 	background: #f1f2ee url('/images/partners-grid/col-s.png');
+	
 }
 /* End of Grid Item IDs */
 
@@ -150,7 +176,6 @@
 	padding-bottom: 0;
 	padding-top: 6px;
 }
-
 .hilite {
 	border-color: transparent transparent #ffffee transparent;
 }
@@ -219,14 +244,12 @@
 	float: left;
 }
 .highlightit img {
-	filter: progid
-	: DXImageTransform.Microsoft.Alpha(opacity=50);
+	filter: progid : DXImageTransform.Microsoft.Alpha(opacity=50);
 	-moz-opacity: 0.5;
 	opacity: 0.5;
 }
 .highlightit:hover img {
-	filter: progid
-	: DXImageTransform.Microsoft.Alpha(opacity=100);
+	filter: progid : DXImageTransform.Microsoft.Alpha(opacity=100);
 	-moz-opacity: 1;
 	opacity: 1;
 }
@@ -255,7 +278,6 @@
 	height: 400px;
 	position: relative;
 }
-
 #iScroll {
 	position: absolute;
 	top: 0px;
