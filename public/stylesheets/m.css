@@ -282,9 +282,15 @@ ul {
 }
 
 
-=======
+
+
 #about-div p{
 	padding: 10px;
 	margin: 10px;
 }
->>>>>>> 20be5993fdb3e0ff1542d8e02675a8d59f8f005b
+
+
+#banner-bottom {
+	margin-left:146px;
+}
+
