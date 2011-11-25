@@ -50,8 +50,6 @@ class UsersController < ApplicationController
   
   
   def update   # does the actual work when updating (what ever they filled out in the edit page)
-    
-    
     @user = User.authenticate(current_user.email, params[:password][:old])
     if @user.nil?
       flash[:error] = "password did not match for email of current user."
