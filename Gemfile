@@ -1,4 +1,5 @@
-# This is a test
+# NOTE:  This project must be run with ruby 1.9.2
+
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'

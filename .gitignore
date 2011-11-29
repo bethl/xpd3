@@ -6,3 +6,4 @@ config/database.yml
 README
 vendor/
 .project
+.rvmrc
