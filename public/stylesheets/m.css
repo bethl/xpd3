@@ -79,14 +79,18 @@ img {
 	background: #95AE3D;
 }
 
+#menu li #signout{
+        color: #a22;
+}
+
 #menu{
 	font-family: 'Questrial', sans-serif;
-    letter-spacing:0.1em;
+        letter-spacing:0.1em;
 	font-size: 14px;
 	line-height:30px;
 	color:#fff;
 	list-style:none outside none;
-    padding-bottom:50px;
+        padding-bottom:50px;
 }
 
 #menu li a{
@@ -94,6 +98,10 @@ img {
 	color:#fff;
 }
 
+#menu #myaccount a{
+        color:#429;
+        font-weight:bold;
+}
 #menu li.highlighted{
 	background-color:#9b9;
 }
@@ -141,10 +149,10 @@ ul.infoz {
 	margin-top:25px;
 	margin-right:7px;
 	padding-top: 0;
-    padding-right: 0;
-	box-shadow:				0 0 5px #000;
-	-o-box-shadow:			0 0 5px #000;
-	-moz-box-shadow:		0 0 5px #000;
+        padding-right: 0;
+	box-shadow:		0 0 5px #000;
+	-o-box-shadow:		0 0 5px #000;
+	-moz-box-shadow:	0 0 5px #000;
 	-webkit-box-shadow:	0 0 5px #000;
 }
 
@@ -175,10 +183,6 @@ ul.infoz {
 #centered {
     text-align: center;
 }
-
-<<<<<<< HEAD
-
-
 
 
 

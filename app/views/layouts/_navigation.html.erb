@@ -1,7 +1,7 @@
 <div id="nav-side">
 	
 	<div>
-		<a href="#">
+		<a href="/">
 			<img id="brand" src="/images/epdMainLgo.png"/>
 		</a>
 	</div>
@@ -18,9 +18,12 @@
 		<li class="<%= "highlighted" if params[:action] == "news" %>"><a href="/news">News</a></li>
 		<li class="<%= "highlighted" if params[:action] == "directions" %>"><a href="/directions">Directions</a></li>
 		<% if signed_in? %>
-			<li class="<%= "highlighted" if params[:action] == "my_account" %>"><a href="/my_account">My Account</a></li>
-			
-			<%= link_to @user, user_path(@user) %>
+                  <div id="accountNav">
+                    <li id="myaccount" class="<%= "highlighted" if params[:action] == "show" %>"><a href="<%= user_path(current_user) %>">My Account</a></li>
+
+                    <%# link_to user_path(current_user), user_path(current_user) %>
+                    <li><%= link_to ">Sign out", signout_path, :method => :delete, :id => "signout" %> </li>
+                  </div>
 		<% end %>
 	</ul>
 	

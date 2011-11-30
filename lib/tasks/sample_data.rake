@@ -5,6 +5,7 @@ namespace :db do
     make_users
     #make_microposts
     #make_relationships
+    make_newsblast
   end
 end
 
@@ -47,4 +48,13 @@ def make_relationships
   followers = users[3..40]
   following.each { |followed| user.follow!(followed) }   # note user = users.first  
   followers.each { |follower| follower.follow!(user) }   # have a bunch of users follow User[0]
+end
+
+def make_newsblast
+  news_blast = NewsBlast.new
+  
+  news_blast.headline = "The Shrimp is Free"
+  news_blast.content = ["first line", "second line", "third, longer line of text input"]
+  news_blast.date = 10.seconds.ago
+  news_blast.save
 end

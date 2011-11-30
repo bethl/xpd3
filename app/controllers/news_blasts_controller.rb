@@ -26,7 +26,8 @@ class NewsBlastsController < ApplicationController
   # GET /news_blasts/new
   # GET /news_blasts/new.xml
   def new
-    if !current_user?(User.find(1))
+    if current_user.admin == false
+    #if !current_user?(User.find(1))
       flash[:error] = "You must be logged in to use this feature."
       redirect_to users_path
       return
@@ -55,10 +56,25 @@ class NewsBlastsController < ApplicationController
     @news_blast.content = []
   
     params[:dyn].each do |n|
-      next if n[1] == ""
-      @news_blast.content << n[1]
+      index = n[0].to_i
+      val = n[1]
+
+      #next if val == ""
+
+      #@news_blast.content << val
+
+      @news_blast.content = val if index == 0
+      @news_blast.content1 = val if index == 1
+      @news_blast.content2 = val if index == 2
+      @news_blast.content3 = val if index == 3
+      @news_blast.content4 = val if index == 4
+      @news_blast.content5 = val if index == 5
+      @news_blast.content6 = val if index == 6
+      @news_blast.content7 = val if index == 7
+
     end
-    
+
+
     respond_to do |format|
       if @news_blast.save
         #format.html { redirect_to(@news_blast, :notice => 'News blast was successfully created.') }

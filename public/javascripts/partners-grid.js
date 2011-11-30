@@ -70,9 +70,10 @@ var contentXML = new Array();       // this is for stupid ie because it can't ju
 
 $(window).load(
 	function() {
-		
+	        doAjaxRead();  // Read the XML file that contains all the paragraphs
+
 		$(".partner-grid").click(function () {
-			
+
 			var element = $(this);
 			var content = "The way text is handled is, it will be a site admin function.  Then, ajax will be used to query for the literature on demand.  Here is essentially how it works http://stackoverflow.com/questions/5223699/new-to-rails-3-ajax-request-with-json-response";
 			
@@ -318,6 +319,8 @@ function changeDisplayed(element) {  // changes the displayed content, including
 function changeParagraph(element)
 {
 	var content = element.css('content');
+        //alert('the content is ' + content);
+        thisId = element.attr('id');
 	//alert(content.length);
 	if(typeof content == 'undefined'){
    		content = "none";  // ie...
@@ -325,16 +328,6 @@ function changeParagraph(element)
    		// Do ajax and check if it's in the xml file
    		// There is a known bug in this, and that is that the first item you click, it will not have the content downloaded and ready yet.
    		// I find this to be a feature in that the the span text is somewhat important.  
-   		
-   		
-   		if (contentXML == "")
-   			doAjaxRead();
-   		
-   		thisId = element.attr('id');
-   		
-   		if (typeof contentXML[thisId] != "undefined")
-   			content = contentXML[thisId];   		
-   		
  	};
  	if(content == ''){ // safari
  		content = "none";
@@ -343,9 +336,15 @@ function changeParagraph(element)
 	
 	if (content != "none")
 		content = content.substring(1, content.length-1);  // trim it up
-	else
-		content = "Why not stop by and speak with our paint & design experts?";   // Default paragraph
-		
+	else // content is still "none"
+        {
+                content = contentXML[thisId];
+                //alert('here...');
+
+                if (typeof contentXML[thisId] == "undefined"){
+		  content = "Why not stop by and speak with our paint & design experts?";   // Default paragraph
+                }
+        }	
 	$("#lovely-description p").replaceWith("<p>" + content + "</p>");
 }
 
