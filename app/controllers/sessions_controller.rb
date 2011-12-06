@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-
+  skip_before_filter :authenticate
+  
   def new
     @title = "Sign in"
     #@session = Session.new      # since there's no model, we can't setup the form automatically...
@@ -7,10 +8,7 @@ class SessionsController < ApplicationController
   end
 
   def create                                         # we get here by clicking the submit button on the sessions/new.html.erb form
-    email = params[:session][:email]
-    unless email.include?('@') 
-	email += "@excelsiorcarpetone.com"
-    end
+    email = default_email
 
     user = User.authenticate(email,  
                              params[:session][:password])
@@ -27,5 +25,14 @@ class SessionsController < ApplicationController
   def destroy
     sign_out
     redirect_to root_path
+  end
+  
+  
+  def default_email
+    email = params[:session][:email]
+    unless email.include?('@') 
+      email += "@excelsiorcarpetone.com"
+    end
+    return email
   end
 end

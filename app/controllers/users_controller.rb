@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_filter :redirect_if_signed_in, :only => [:new, :create]
-  before_filter :authenticate, :except => [:show, :new, :create]   # runs authenticate() before edit() and update(), etc...
+  #before_filter :authenticate, :except => [:show, :new, :create]   # runs authenticate() before edit() and update(), etc...
+  skip_before_filter :authenticate, :only => [:show, :new, :create] 
+  
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => [:destroy, :index]
   
@@ -48,8 +50,6 @@ class UsersController < ApplicationController
   
   
   def update   # does the actual work when updating (what ever they filled out in the edit page)
-    
-    
     @user = User.authenticate(current_user.email, params[:password][:old])
     if @user.nil?
       flash[:error] = "password did not match for email of current user."

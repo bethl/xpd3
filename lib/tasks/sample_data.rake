@@ -5,6 +5,7 @@ namespace :db do
     make_users
     #make_microposts
     #make_relationships
+    make_newsblast
   end
 end
 
@@ -14,13 +15,7 @@ def make_users
                        :password => "111111",
                        :password_confirmation => "111111")
   admin.toggle!(:admin)
-  
   admin.persons.create(:first_name => "Carolyn", :last_name => "Manhatton", :email => admin.email)
-  
-  
-  
-
-  
   
   
   
@@ -31,8 +26,6 @@ def make_users
     User.create!(:email => email,
                  :password => password,
                  :password_confirmation => password).persons.create(:first_name => name, :last_name => name, :email => email)
-   
-    
   end
 end
 
@@ -55,4 +48,13 @@ def make_relationships
   followers = users[3..40]
   following.each { |followed| user.follow!(followed) }   # note user = users.first  
   followers.each { |follower| follower.follow!(user) }   # have a bunch of users follow User[0]
+end
+
+def make_newsblast
+  news_blast = NewsBlast.new
+  
+  news_blast.headline = "The Shrimp is Free"
+  news_blast.content = ["first line", "second line", "third, longer line of text input"]
+  news_blast.date = 10.seconds.ago
+  news_blast.save
 end
