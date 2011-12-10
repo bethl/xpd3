@@ -25,10 +25,12 @@ end
 
 def parse_to_data(file)
   # create a hash for each id
-  converter = CSS_TO_HASH_CONVERTER.new
-  data_hash = converter.get_all_the_blocks(file)
-  return data_hash
+  #converter = CSS_TO_HASH_CONVERTER.new
+  converter = GetDataToHash.new
+  #data_hash = converter.get_all_the_blocks(file)
+  data_hash = converter.go(file)
 
+  return data_hash
 end
 
 def get_css_file
@@ -79,6 +81,25 @@ def cut_css_file(file)
   file = file[0..cut_point-1]
   
   return file
+end
+
+# This is a two pass system, 
+# First)  We get the whole ID, plus all tags in the unit's bounds
+# Then)   We get the content tag out of the unit's "bounds"
+class GetDataToHash
+  def go(my_string)
+    ret_hash = {}
+    top_levels = my_string.scan /#(\w+?)\s*{(.*?)}/m
+
+    for top_level in top_levels
+      id = top_level[0]
+      #p top_level[1]
+      content = top_level[1].scan /(content):\s*"(.*?)"\s*;/m
+      next if content.nil? or content.empty?
+      ret_hash[id] = content[0][1]
+    end
+    return ret_hash
+  end
 end
 
 
