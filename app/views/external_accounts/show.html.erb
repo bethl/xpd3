@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @external_account.name %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @external_account.link %>
+</p>
+
+<p>
+  <b>Username:</b>
+  <%= @external_account.username %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @external_account.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_external_account_path(@external_account) %> |
+<%= link_to 'Back', external_accounts_path %>

@@ -1,0 +1,27 @@
+<h1>Listing external_accounts</h1>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @external_accounts.each do |external_account| %>
+  <tr>
+    <td><%= link_to external_account.name, external_account.link %></td>
+    <td><%= external_account.username %></td>
+    <td><%= external_account.password %></td>
+    <td><%= link_to 'Show', external_account %></td>
+    <td><%= link_to 'Edit', edit_external_account_path(external_account) %></td>
+    <td><%= link_to 'Destroy', external_account, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New External account', new_external_account_path %>

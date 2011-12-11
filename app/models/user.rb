@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_many :persons
   has_many :addresses
   
-  has_one :employee
+  #has_one :employee, :dependant => :destroy
   
   
   

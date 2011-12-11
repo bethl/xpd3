@@ -12,10 +12,12 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])  #  Think  www.example.com/users/:id
+    @user   = User.find(params[:id])  #  Think  www.example.com/users/:id
     #@microposts = @user.microposts.paginate(:page => params[:page])
     @person = @user.persons.first   # just get the first person for now...
-    @title = @user.email
+    @title  = @user.email
+    #@employee = @user.employee.create
+
   end
 
   

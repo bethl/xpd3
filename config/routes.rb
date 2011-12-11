@@ -1,5 +1,7 @@
 Xpd3::Application.routes.draw do
   
+  resources :external_accounts
+
   resources :suppliers
 
   resources :ipfixes
@@ -23,8 +25,7 @@ Xpd3::Application.routes.draw do
   
   resources :news_blasts
   
-  get "pages/manage"
-  
+  #match '/manage', :to => 'pages#manage'
   match '/about', :to => 'pages#about'
   match '/gallery', :to => 'pages#gallery'
   match '/specials', :to => 'pages#specials'
