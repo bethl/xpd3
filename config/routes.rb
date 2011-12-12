@@ -25,7 +25,7 @@ Xpd3::Application.routes.draw do
   
   resources :news_blasts
   
-  #match '/manage', :to => 'pages#manage'
+  match '/manage', :to => 'pages#manage'
   match '/about', :to => 'pages#about'
   match '/gallery', :to => 'pages#gallery'
   match '/specials', :to => 'pages#specials'
@@ -41,7 +41,9 @@ Xpd3::Application.routes.draw do
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
   
+  match '/employees/new', :to => 'employees#new'
   
+  resources :employees
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -27,6 +27,9 @@ class UsersController < ApplicationController
     @user.email = "l@g.com"
     
     @title = "Sign up"
+
+    #@user.employee = Employee.new
+
   end
 
   def create

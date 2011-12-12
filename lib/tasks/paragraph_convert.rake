@@ -20,14 +20,29 @@ def convert_lovely_paragraphs
   
   data = parse_to_data(css_file)
 
-  puts data
+  htx = HashToXml.new
+  htx.mode = :basic   # expects a data hash like { "id" => "value" }
+  htx.parents = ["contents"] # allows you to specify parent nodes 
+  htx.element = "content"    # specify the element name
+  htx.element_attributes = { "id" => :key }   # specify any attributes
+                             # This allows us to specify the attribute to
+                             # be named "id" and have it's value be
+                             # :key which points to the key in the data hash
+
+  htx.child_elements = ["string"]
+  htx.child_values = [:value]
+  data = htx.go(data)
+  
+  fil = File.new("public/data/content.xml", "w+")
+  fil.write(data)
+  fil.close
+
+  puts "content.xml successfully updated"
 end
 
 def parse_to_data(file)
   # create a hash for each id
-  #converter = CSS_TO_HASH_CONVERTER.new
   converter = GetDataToHash.new
-  #data_hash = converter.get_all_the_blocks(file)
   data_hash = converter.go(file)
 
   return data_hash
@@ -39,32 +54,9 @@ def get_css_file
   css_file = cut_css_file(css_file)
   css_file = remove_comments(css_file)
   css_file = remove_empty_lines(css_file)
-  css_file = ensure_space_before_bracket(css_file)
 
   return css_file
 end
-
-def ensure_space_before_bracket(file)
-  file = ratcheting_spinner_number_nine(file)
-  return file
-end
-
-# this is a recursive function for ensure_space_before_bracket
-def ratcheting_spinner_number_nine(file, start=0)
-  index = file.index("{", start)
-  
-  if index != nil
-    file = install_extra_spacing(file, index)
-    file = ratcheting_spinner_number_nine(file, index+2) # add one to index since we spliced a new space into it
-  end
-  
-  return file
-end
-
-def install_extra_spacing(file, point)
-  return file.insert(point, " ")
-end
-
 
 def remove_empty_lines(file)
   file = file.gsub /^\s*$\n/, ''
@@ -86,24 +78,7 @@ end
 # This is a two pass system, 
 # First)  We get the whole ID, plus all tags in the unit's bounds
 # Then)   We get the content tag out of the unit's "bounds"
-class GetDataToHash
-  def go(my_string)
-    ret_hash = {}
-    top_levels = my_string.scan /#(\w+?)\s*{(.*?)}/m
-
-    for top_level in top_levels
-      id = top_level[0]
-      #p top_level[1]
-      content = top_level[1].scan /(content):\s*"(.*?)"\s*;/m
-      next if content.nil? or content.empty?
-      ret_hash[id] = content[0][1]
-    end
-    return ret_hash
-  end
-end
-
-
-
+#
 # This class parses a string of URL items, and converts it to a hash of the 
 # corresponding values
 # so...
@@ -121,55 +96,120 @@ s
 # cc = CSS_TO_HASH_CONVERTER.new
 # s = cc.get_all_the_blocks(file)
 # puts s
-class CSS_TO_HASH_CONVERTER
-  def get_all_the_blocks(file, next_start=0)
+class GetDataToHash
+  def go(my_string)
     ret_hash = {}
+    top_levels = my_string.scan /#(\w+?)\s*{(.*?)}/m
 
-    while (true)
-      s = parse_data(file, next_start)  #=> [Array, end]   ...Array = [key, value]
-      array_out = s[0]
-      next_start = s[1]
-
-      if next_start.nil?   # Get out if we're all done parsing out data
-        return ret_hash
-      end
-
-      # Put the data into the master hash...
-      ret_hash[array_out[0]] = array_out[1]
-
+    for top_level in top_levels
+      id = top_level[0]
+      #p top_level[1]
+      content = top_level[1].scan /(content):\s*"(.*?)"\s*;/m
+      next if content.nil? or content.empty?
+      ret_hash[id] = content[0][1]
     end
-  end
-
-  private
-  
-  def parse_data(file, start=0)
-    # find the next '#'
-    index = file.index("#", start)
-
-    if index.nil?
-      return [nil, nil]
-    end
-
-    # find the next '}' after
-    index_end = file.index("}", index)
-
-    my_block = file[index,index_end+1]
-
-    my_datas = get_data_from_block(my_block)    #=> [key, value]
-
-    return [my_datas, index_end]
-  end
-
-  def get_data_from_block(block)
-    my_array = Array.new
-    m = block =~ /#(\S*).*content:\s*"(.*)"/m
-
-    # my_array[:$1] = $2
-    my_array[0] = $1
-    my_array[1] = $2
-
-    return my_array
+    return ret_hash
   end
 end
 
+
+class HashToXml
+  attr_accessor :mode, :parents, :element, :value, :element_attributes, :child_elements, :child_values
+  
+  def go(data)
+    case @mode
+    when :basic
+      #puts "basic expects the data hash to be a simple series of key value pairs."
+      return basic(data)
+    end
+  end
+  
+  private
+  
+  def basic(data)
+    output_string = ""
+    header = '<?xml version="1.0" encoding="iso-8859-1"?>'
+    output_string += header + "\n"
+    output_string << open_parents
+    
+    attribs = get_attributes(data)
+    
+    output_string << compile_elements(data, attribs) # attribs = [" id="kara", " id="rockefeller"]
+      
+    output_string << close_parents
+    return output_string
+  end
+  
+  def compile_elements(data, attribs=nil)
+    ret_string = ""
+    tabs = (@parents.length).times.map{"  "}.join
+    
+    i = 0
+    data.each do |key, val|
+      
+      @child_elements.each do |child_elements|
+        ret_string << tabs + "<#{@element}#{attribs[i]}>\n"
+        ret_string << tabs + "  " + "<#{child_elements}>\n"
+        ret_string << tabs + "    " + val + "\n"
+        ret_string << tabs + "  " + "</#{child_elements}>\n"
+        ret_string << tabs + "</#{@element}>\n"
+      end
+      i += 1
+    end
+    
+    return ret_string
+  end
+  
+  # This function will figure out what the attributes payload will be for each 
+  # element all at once.  
+  def get_attributes(data)
+    ret_array = []
+    i = 0
+    
+    data.each do |key, val|  # for each data pair in the data population
+      
+      # only tested for it iterating once...
+      @element_attributes.each do |attribute_name, attribute_pointer|  # for each element pair in the specifier
+        tag_name = key if attribute_name == :key
+        tag_name = val if attribute_name == :value
+        tag_name = attribute_name if attribute_name.is_a?(String)
+        raise 'element_attributes was set improperly...' if tag_name.nil?
+        
+        value = key if attribute_pointer == :key 
+        value = val if attribute_pointer == :value
+        value = attribute_pointer if attribute_pointer.is_a?(String)   #untested
+        raise 'element_attributes was set improperly...' if value.nil?
+
+        ret_array << " #{tag_name}=\"#{value}\""
+      end
+      
+      #puts ret_string
+    end
+    ret_array = nil if ret_array.empty? # untested
+    return ret_array
+  end
+  
+  def open_parents
+    ret_string = ""
+    i = 0
+    @parents.each do |parent|
+      tabs = i.times.map { "  " }.join
+      ret_string += tabs + "<#{parent}>\n"
+      i += 1
+    end
+    return ret_string
+  end
+  
+  def close_parents
+    ret_string = ""
+    i = @parents.length-1
+    
+    @parents.reverse.each do |parent|
+      tabs = i.times.map { "  " }.join
+      ret_string += tabs + "</#{parent}>\n"
+      i -= 1
+    end
+    return ret_string
+  end
+end
 

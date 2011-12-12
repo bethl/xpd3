@@ -27,9 +27,7 @@ class PagesController < ApplicationController
   
   
   def manage
-    @nb = NewsBlast.new if NewsBlast.count == 0
-    
-    @nb = NewsBlast.first
+    @employee = Employee.new
   end
   
   def template
