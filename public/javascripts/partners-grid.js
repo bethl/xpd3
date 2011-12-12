@@ -324,7 +324,8 @@ function changeParagraph(element)
 	//alert(content.length);
 	if(typeof content == 'undefined'){
    		content = "none";  // ie...
-   		
+   		content = contentXML[thisId];
+                
    		// Do ajax and check if it's in the xml file
    		// There is a known bug in this, and that is that the first item you click, it will not have the content downloaded and ready yet.
    		// I find this to be a feature in that the the span text is somewhat important.  
@@ -339,7 +340,6 @@ function changeParagraph(element)
 	else // content is still "none"
         {
                 content = contentXML[thisId];
-                //alert('here...');
 
                 if (typeof contentXML[thisId] == "undefined"){
 		  content = "Why not stop by and speak with our paint & design experts?";   // Default paragraph
@@ -363,6 +363,7 @@ function doAjaxRead()
 				//alert(string);
 				//contentXML.push([id, string]);
 				contentXML[id] = string;
+                                //alert(contentXML.length);
 				
 				//$('<div class="items" id="link_'+id+'"></div>').html('<a href="'+url+'">'+title+'</a>').appendTo('#page-wrap');
 				

@@ -33,10 +33,11 @@ def convert_lovely_paragraphs
   htx.child_values = [:value]
   data = htx.go(data)
   
-  fil = File.new("public/data/content.xml", "w+")
+  fil = File.new("public/data/contents.xml", "w+")
   fil.write(data)
   fil.close
 
+  #puts data
   puts "content.xml successfully updated"
 end
 
@@ -150,7 +151,7 @@ class HashToXml
       @child_elements.each do |child_elements|
         ret_string << tabs + "<#{@element}#{attribs[i]}>\n"
         ret_string << tabs + "  " + "<#{child_elements}>\n"
-        ret_string << tabs + "    " + val + "\n"
+        ret_string << tabs + "    " + CGI.escapeHTML(val) + "\n"
         ret_string << tabs + "  " + "</#{child_elements}>\n"
         ret_string << tabs + "</#{@element}>\n"
       end

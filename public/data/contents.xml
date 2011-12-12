@@ -1,12 +1,73 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-  <contents>
-    <content id="sha">
-      <string>Benjamin Moore paints keep this dining room feeling cozy with a deep shade of red (2083-10).</string>
-    </content>
-	
-	
-	
-	
-	
-  </contents>
-
+<contents>
+  <content id="kara">
+    <string>
+      A beautifully woven carpet from pure New Zealand wool in maraschino red increases drama in this family room.
+    </string>
+  </content>
+  <content id="cabot">
+    <string>
+      With Cabot Stain wood care products your floors will be durable and beautiful.
+    </string>
+  </content>
+  <content id="ben">
+    <string>
+      Benjamin Moore paints keep this dining room feeling cozy with a deep shade of red (2083-10).
+    </string>
+  </content>
+  <content id="cam">
+    <string>
+      High performance surfaces by Cambria keep the look fresh and the care easy.
+    </string>
+  </content>
+  <content id="fin">
+    <string>
+      This vintage bench was painted with Van Gogh (2070) from the Fine Paints of Europe Classic Collection.
+    </string>
+  </content>
+  <content id="gra">
+    <string>
+      Graham paint sets off the white cabinetry in this kitchen.
+    </string>
+  </content>
+  <content id="old">
+    <string>
+      Old Masters is a family owned business that has offered stains and finishes since 1953.
+    </string>
+  </content>
+  <content id="pen">
+    <string>
+      Penofin Knotwood is an example of the many stains, finishes and sealers offered by Penofin
+    </string>
+  </content>
+  <content id="pratt">
+    <string>
+      Pratt &amp; Lambert paint showcases the detailed woodwork.
+    </string>
+  </content>
+  <content id="sil">
+    <string>
+      Silestone White Zeus Extreme is the whitest quartz on the countertop market today. It delivers the superior bacteriostatic and scratch resistance performance.
+    </string>
+  </content>
+  <content id="zar">
+    <string>
+      ZAR offers  wood finishes, interior and exterior stains.
+    </string>
+  </content>
+  <content id="hun">
+    <string>
+      Hunter Douglas has many window covering options.
+    </string>
+  </content>
+  <content id="kra">
+    <string>
+      Kravet offers possibilites that work perfectly with your lifestyle and interior.
+    </string>
+  </content>
+  <content id="top">
+    <string>
+      Crystal knobs are a popular choice.
+    </string>
+  </content>
+</contents>
