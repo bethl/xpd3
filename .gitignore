@@ -9,4 +9,5 @@ vendor/
 .rvmrc
 robots.txt
 sitemap.xml
+*.swp
 
