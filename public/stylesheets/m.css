@@ -124,6 +124,11 @@ ul.infoz {
 	min-height:500px;
 	float:left;
 	font-size:14px;
+	margin-left:12px;
+	box-shadow:		0 0 10px #000;
+	-o-box-shadow:		0 0 10px #000;
+	-moz-box-shadow:	0 0 10px #000;
+	-webkit-box-shadow:	0 0 10px #000;
 }
 
 
