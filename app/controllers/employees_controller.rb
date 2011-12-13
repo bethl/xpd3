@@ -8,20 +8,30 @@ class EmployeesController < ApplicationController
   # And sets it up
   def create
     # Get User by username...
-    @user =  User.where(:email => params[:user][:email]).first  
+    user_input = params[:user][:email]
+    @user =  User.where(:email => user_input).first  
+
+    @employee = Employee.create(params[:employee])
+
+    if @user.nil?
+      flash[:error] = "Error:  User #{user_input} not found."
+      #flash[:secret] = "<script>alert('hi');</script>".html_safe
+      redirect_to '/manage'
+      return
+    end
 
     # Make sure user is not already set to an employee
     #@employee = Employee.new
 
-    #p e
-    @user.employee = Employee.create(params[:employee])
+    @user.employee = @employee
 
+    @user.save
     # print "Employee Created!"
-    if @user.save
+    if !@user.employee.nil?
       flash[:success] = "User successfully set to employee!"
       redirect_to @user
     else
-      flash[:error] = "An error occured..."
+      flash[:error] = "An error occured creating employee..."
       p @user.employee
       redirect_to @user
     end
